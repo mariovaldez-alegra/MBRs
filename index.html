@@ -1,106 +1,1057 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>MBR Alegra Collection — Marzo 2026</title>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  
+
   <style>
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { 
-      background: #f0f2f5; /* Fondo gris claro */
-      font-family: 'Segoe UI', Arial, sans-serif; 
-      color: #1a1a2e; 
-      padding: 40px 15px; /* Espacio arriba y abajo para que respire */
+
+    body { background: #f0f2f5; font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; }
+
+    <script>
+
+  (function() {
+
+    // 1. Bloqueamos la vista inmediatamente
+
+    const style = document.createElement('style');
+
+    style.innerHTML = 'body { display: none !important; }';
+
+    document.head.appendChild(style);
+
+
+
+    const userEmail = prompt("🔒 ACCESO RESTRINGIDO - MBR ALEGRA\n\nPor favor, ingresa tu correo corporativo (@alegra.com):");
+
+
+
+    if (userEmail !== null && userEmail.toLowerCase().endsWith("@alegra.com")) {
+
+      // Si es válido, permitimos ver la página
+
+      style.remove();
+
+    } else {
+
+      // Si es inválido, mostramos el error
+
+      alert("Acceso denegado. Este informe solo puede ser visualizado por personal de Alegra.");
+
+      document.documentElement.innerHTML = `
+
+        <body style="background: #0d1b2a; color: white; font-family: sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0;">
+
+          <div style="text-align: center;">
+
+            <h1 style="font-size: 50px;">🔒</h1>
+
+            <h2>Acceso Restringido</h2>
+
+            <p>Debes usar un correo válido de @alegra.com para ver este informe.</p>
+
+            <button onclick="location.reload()" style="padding: 10px 20px; background: #6a9dc8; border: none; border-radius: 5px; cursor: pointer; color: white; font-weight: bold;">Reintentar</button>
+
+          </div>
+
+        </body>
+
+      `;
+
+      window.stop();
+
     }
 
-    /* Contenedor tipo "Tarjeta" centrada */
-    .wrapper { 
-      max-width: 850px; 
-      margin: 0 auto; 
-      background: #fff; 
-      border-radius: 12px; 
-      overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra elegante */
-    }
+  })();
+
+</script>
+
+      
+
+    .wrapper { max-width: 780px; margin: 0 auto; background: #fff; }
+
+
+
+    /* ─── HEADER ─── */
 
     .header { background: #0D1B2A; padding: 28px 36px 22px; display: flex; justify-content: space-between; align-items: flex-start; }
+
     .header-brand { color: #fff; }
+
     .header-brand .logo { font-size: 22px; font-weight: 800; letter-spacing: 2px; }
+
     .header-brand .sub  { font-size: 10px; color: #6a9dc8; letter-spacing: 3px; text-transform: uppercase; margin-top: 4px; }
+
     .header-meta { text-align: right; }
+
     .header-meta .period { font-size: 20px; font-weight: 700; color: #fff; }
+
     .header-meta .date   { font-size: 11px; color: #6a9dc8; margin-top: 4px; }
+
     .header-intro { background: #0D1B2A; padding: 0 36px 24px; font-size: 12px; color: #a8c4dc; line-height: 1.6; }
 
+
+
+    /* ─── KPI BAR ─── */
+
     .kpi-bar { background: #1e3a5f; display: flex; }
+
     .kpi-tile { flex: 1; padding: 16px 20px; text-align: center; border-right: 1px solid #2a4f7a; }
+
     .kpi-tile:last-child { border-right: none; }
+
     .kpi-label { font-size: 10px; color: #8ab4d4; text-transform: uppercase; letter-spacing: 1px; }
+
     .kpi-value { font-size: 22px; font-weight: 800; color: #fff; margin-top: 4px; }
+
     .kpi-delta { font-size: 11px; margin-top: 2px; }
 
+
+
+    /* ─── SECTION TITLE ─── */
+
     .section { padding: 28px 32px 0; }
+
     .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #0D1B2A; padding-bottom: 8px; border-bottom: 2px solid #0D1B2A; margin-bottom: 20px; }
+
     .divider { height: 1px; background: #eef0f3; margin: 28px 0; }
 
+
+
+    /* ─── METRIC CARD ─── */
+
     .card { border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; margin-bottom: 16px; background: #fff; }
+
     .card-header { padding: 12px 16px 8px; border-bottom: 1px solid #eef0f3; }
+
     .card-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0D1B2A; }
+
+    .card-title .glo  { color: #E8731A; }
+
+    .card-title .core { color: #2d7a4f; }
+
+    .card-title .lite { color: #1e5fa8; }
+
+    .card-sub { font-size: 10px; color: #aaa; margin-top: 2px; }
+
     .kpi-cols { display: flex; border-bottom: 1px solid #f0f2f5; }
+
     .kpi-col { flex: 1; padding: 12px 8px; text-align: center; border-right: 1px solid #f0f2f5; }
+
     .kpi-col:last-child { border-right: none; }
-    .ver-name  { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 1px; }
-    .ver-val   { font-size: 16px; font-weight: 800; color: #0D1B2A; }
+
+    .ver-name  { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+
+    .ver-val   { font-size: 16px; font-weight: 800; color: #0D1B2A; line-height: 1.1; }
+
+    .ver-val.sm { font-size: 13px; }
+
+    .ver-lm    { font-size: 10px; margin-top: 4px; }
+
+    .ver-delta { font-size: 10px; margin-top: 1px; }
+
     .pos { color: #00897B; font-weight: 700; }
+
+    .neg { color: #D50000; font-weight: 700; }
+
+    .neu { color: #888; }
+
     .chart-area { padding: 12px 16px 8px; }
-    .footer { background: #0D1B2A; padding: 24px 32px; margin-top: 36px; font-size: 12px; color: #8ab4d4; }
+
+    .legend-row { display: flex; gap: 14px; margin-bottom: 6px; font-size: 10px; color: #888; align-items: center; }
+
+    .legend-dot { display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+
+    .legend-dash { display: inline-block; width: 10px; height: 2px; border-radius: 1px; margin-right: 4px; vertical-align: middle; background-repeating-linear-gradient(to right, #bbb 0, #bbb 4px, transparent 4px, transparent 6px); background: repeating-linear-gradient(to right, #bbb 0, #bbb 4px, transparent 4px, transparent 7px); }
+
+
+
+    /* ─── TWO-COL ─── */
+
+    .two-col { display: flex; gap: 12px; margin-bottom: 0; }
+
+    .two-col > * { flex: 1; min-width: 0; }
+
+
+
+    /* ─── INSIGHT BOX ─── */
+
+    .insight-box { background: #f8f9fc; border-left: 3px solid #E8731A; padding: 10px 14px; margin: 4px 0 14px; font-size: 12px; color: #444; line-height: 1.7; }
+
+    .insight-box strong { color: #0D1B2A; }
+
+
+
+    /* ─── FORMULA BOX ─── */
+
+    .formula-box { background: #f0f4f8; border: 1px dashed #aac0d8; border-radius: 6px; padding: 8px 12px; margin: 8px 16px 4px; font-size: 11px; color: #444; line-height: 1.7; }
+
+    .formula-box strong { color: #1e3a5f; }
+
+
+
+    /* ─── SO WHAT / NOW WHAT ─── */
+
+    .sw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; font-size: 13px; line-height: 1.6; color: #333; }
+
+    .sw-item:last-child { border-bottom: none; }
+
+    .nw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; }
+
+    .nw-item:last-child { border-bottom: none; }
+
+    .nw-title { font-weight: 700; color: #0D1B2A; font-size: 13px; }
+
+    .nw-desc  { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.5; }
+
+
+
+    /* ─── BRIDGE ─── */
+
+    .bridge-row-charts { display: flex; gap: 12px; }
+
+    .bridge-card { flex: 1; border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; min-width: 0; }
+
+    .bridge-card-title { padding: 10px 14px 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #0D1B2A; border-bottom: 1px solid #eef0f3; }
+
+    .bridge-chart-area { padding: 10px 8px 6px; }
+
+    .bridge-summary { background: #f0fafa; border-left: 3px solid #45b6c5; padding: 10px 14px; margin-top: 12px; font-size: 12px; color: #444; line-height: 1.7; }
+
+    .bridge-summary strong { color: #0D1B2A; }
+
+
+
+    /* ─── PROJ TABLE ─── */
+
+    table.pt { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 0; }
+
+    table.pt th { background: #1e3a5f; color: #fff; padding: 7px 8px; text-align: center; }
+
+    table.pt th:first-child { text-align: left; }
+
+    table.pt td { padding: 5px 8px; text-align: center; border-bottom: 1px solid #eef0f3; }
+
+    table.pt td:first-child { text-align: left; font-weight: 700; }
+
+    table.pt tr.sub td { color: #666; padding-left: 18px; background: #fafbfc; font-weight: 400; }
+
+    table.pt tr.sub td:first-child { font-weight: 400; }
+
+    .proj-bullets { background: #f8f9fc; border-radius: 6px; border-left: 3px solid #1e5fa8; padding: 10px 14px; margin-bottom: 14px; font-size: 12px; color: #444; line-height: 1.8; }
+
+    .proj-bullets ul { list-style: none; padding: 0; }
+
+    .proj-bullets li { padding-left: 12px; position: relative; }
+
+    .proj-bullets li::before { content: '•'; color: #1e5fa8; font-weight: bold; position: absolute; left: 0; }
+
+
+
+    /* ─── FOOTER ─── */
+
+    .footer { background: #0D1B2A; padding: 24px 32px; margin-top: 36px; font-size: 12px; color: #8ab4d4; line-height: 1.8; }
+
   </style>
 
-  <script>
-    (function() {
-      // Bloqueamos la vista inmediatamente
-      const styleTag = document.createElement('style');
-      styleTag.innerHTML = 'body { display: none !important; }';
-      document.head.appendChild(styleTag);
-
-      const email = prompt("🔒 ACCESO RESTRINGIDO - ALEGRA\nIngresa tu correo @alegra.com:");
-
-      if (email && email.toLowerCase().endsWith("@alegra.com")) {
-        styleTag.remove(); // Desbloqueamos si es válido
-      } else {
-        alert("Acceso denegado.");
-        document.documentElement.innerHTML = '<body style="background:#0D1B2A;color:white;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;"><h1>🔒 Solo personal de Alegra</h1></body>';
-      }
-    })();
-  </script>
 </head>
+
 <body>
 
 <div class="wrapper">
+
+
+
+  <!-- HEADER -->
+
   <div class="header">
+
     <div class="header-brand">
+
       <div class="logo">ALEGRA</div>
-      <div class="sub">MBR · Collection</div>
+
+      <div class="sub">Monthly Business Review · Collection</div>
+
     </div>
+
     <div class="header-meta">
+
       <div class="period">Marzo 2026</div>
+
       <div class="date">8 de abril de 2026</div>
+
     </div>
+
   </div>
 
   <div class="header-intro">
-    Hola equipo, compartimos los resultados de marzo 2026 para el área de Collection.
+
+    Hola equipo, compartimos los resultados de <strong style="color:#fff;">marzo 2026</strong> para el área de Collection — recaudo, eficiencia transaccional, drivers del mes y próximos pasos.
+
   </div>
 
+
+
+  <!-- KPI BAR -->
+
   <div class="kpi-bar">
+
     <div class="kpi-tile">
+
       <div class="kpi-label">Recaudo GLO</div>
+
       <div class="kpi-value">$2,420,025</div>
-      <div class="kpi-delta pos">▲ +5.6%</div>
+
+      <div class="kpi-delta pos">▲ +5.6% vs Feb</div>
+
     </div>
+
     <div class="kpi-tile">
-      <div class="k
+
+      <div class="kpi-label">NSM Global</div>
+
+      <div class="kpi-value">93.8%</div>
+
+      <div class="kpi-delta pos">▲ +4.6pp vs Feb</div>
+
+    </div>
+
+    <div class="kpi-tile">
+
+      <div class="kpi-label">Proyección Abril</div>
+
+      <div class="kpi-value">$2,355,699</div>
+
+      <div class="kpi-delta pos">▲ +0.5% vs proyección anterior</div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ①  WHAT -->
+
+  <div class="section">
+
+    <div class="section-title">① What — Resultados Marzo 2026</div>
+
+
+
+    <!-- RECAUDO GLO -->
+
+    <div class="card">
+
+      <div class="card-header">
+
+        <div class="card-title">RECAUDO <span class="glo">GLO</span></div>
+
+        <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
+
+      </div>
+
+      <div class="kpi-cols">
+
+        <div class="kpi-col">
+
+          <div class="ver-name">COL</div>
+
+          <div class="ver-val">$1,565,751</div>
+
+          <div class="ver-lm pos">LM: ▲ +4.6%</div>
+
+          <div class="ver-delta pos">Δ: ▲ +$69,027</div>
+
+        </div>
+
+        <div class="kpi-col">
+
+          <div class="ver-name">DOM</div>
+
+          <div class="ver-val">$411,608</div>
+
+          <div class="ver-lm pos">LM: ▲ +11.8%</div>
+
+          <div class="ver-delta pos">Δ: ▲ +$43,408</div>
+
+        </div>
+
+        <div class="kpi-col">
+
+          <div class="ver-name">MEX</div>
+
+          <div class="ver-val">$222,792</div>
+
+          <div class="ver-lm pos">LM: ▲ +3.5%</div>
+
+          <div class="ver-delta pos">Δ: ▲ +$7,477</div>
+
+        </div>
+
+        <div class="kpi-col">
+
+          <div class="ver-name">CRI</div>
+
+          <div class="ver-val">$71,933</div>
+
+          <div class="ver-lm pos">LM: ▲ +11.8%</div>
+
+          <div class="ver-delta pos">Δ: ▲ +$7,600</div>
+
+        </div>
+
+      </div>
+
+      <div class="chart-area">
+
+        <div class="legend-row">
+
+          <span><span class="legend-dash"></span>2025</span>
+
+          <span><span class="legend-dot" style="background:#E8731A;"></span>2026</span>
+
+        </div>
+
+        <canvas id="recGLO" height="100"></canvas>
+
+      </div>
+
+    </div>
+
+    <div class="insight-box">
+
+      <strong>$2,420K USD (+5.65% vs Febrero).</strong> Este mes recaudamos $2,420K USD a través de 54.6K transacciones. Comparado con el mes anterior es un +50K (5.65%) en USD y un aumento del <strong>+25.26% vs el año anterior</strong>. Marzo tuvo buen performance per se; y también se ve impulsado por crecimiento de new adds, facturas pendientes de febrero y upgrades.
+
+    </div>
+
+
+
+    <!-- RECAUDO CORE + LITE -->
+
+    <div class="two-col">
+
+      <div class="card">
+
+        <div class="card-header">
+
+          <div class="card-title">RECAUDO <span class="core">CORE</span></div>
+
+          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
+
+        </div>
+
+        <div class="kpi-cols">
+
+          <div class="kpi-col">
+
+            <div class="ver-name">COL</div>
+
+            <div class="ver-val sm">$920,775</div>
+
+            <div class="ver-lm pos">LM: ▲ +3.8%</div>
+
+            <div class="ver-delta pos">Δ: +$33,984</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">DOM</div>
+
+            <div class="ver-val sm">$230,956</div>
+
+            <div class="ver-lm pos">LM: ▲ +11.4%</div>
+
+            <div class="ver-delta pos">Δ: +$23,561</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">MEX</div>
+
+            <div class="ver-val sm">$125,066</div>
+
+            <div class="ver-lm pos">LM: ▲ +1.1%</div>
+
+            <div class="ver-delta pos">Δ: +$1,355</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">CRI</div>
+
+            <div class="ver-val sm">$36,861</div>
+
+            <div class="ver-lm pos">LM: ▲ +7.2%</div>
+
+            <div class="ver-delta pos">Δ: +$2,481</div>
+
+          </div>
+
+        </div>
+
+        <div class="chart-area">
+
+          <div class="legend-row">
+
+            <span><span class="legend-dash"></span>2025</span>
+
+            <span><span class="legend-dot" style="background:#2d7a4f;"></span>2026</span>
+
+          </div>
+
+          <canvas id="recCORE" height="80"></canvas>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-header">
+
+          <div class="card-title">RECAUDO <span class="lite">LITE</span></div>
+
+          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
+
+        </div>
+
+        <div class="kpi-cols">
+
+          <div class="kpi-col">
+
+            <div class="ver-name">COL</div>
+
+            <div class="ver-val sm">$644,976</div>
+
+            <div class="ver-lm pos">LM: ▲ +5.7%</div>
+
+            <div class="ver-delta pos">Δ: +$35,043</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">DOM</div>
+
+            <div class="ver-val sm">$180,652</div>
+
+            <div class="ver-lm pos">LM: ▲ +12.3%</div>
+
+            <div class="ver-delta pos">Δ: +$19,847</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">MEX</div>
+
+            <div class="ver-val sm">$97,726</div>
+
+            <div class="ver-lm pos">LM: ▲ +6.7%</div>
+
+            <div class="ver-delta pos">Δ: +$6,122</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">CRI</div>
+
+            <div class="ver-val sm">$35,072</div>
+
+            <div class="ver-lm pos">LM: ▲ +17.1%</div>
+
+            <div class="ver-delta pos">Δ: +$5,119</div>
+
+          </div>
+
+        </div>
+
+        <div class="chart-area">
+
+          <div class="legend-row">
+
+            <span><span class="legend-dash"></span>2025</span>
+
+            <span><span class="legend-dot" style="background:#1e5fa8;"></span>2026</span>
+
+          </div>
+
+          <canvas id="recLITE" height="80"></canvas>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- NSM GLO -->
+
+    <div class="card" style="margin-top:8px;">
+
+      <div class="card-header">
+
+        <div class="card-title">EFICIENCIA TRANSACCIONAL (NSM) <span class="glo">GLO</span></div>
+
+        <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
+
+      </div>
+
+      <div class="formula-box">
+
+        <strong>Fórmula:</strong> Eficiencia transaccional = Transacciones exitosas de los usuarios proyectados / Transacciones proyectadas a cobrar para el mes<br>
+
+        <strong>Ejemplo:</strong> Si de 10 usuarios proyectados le cobramos a 9 y 1 fue retirado, la eficiencia sería del 90%.
+
+      </div>
+
+      <div class="kpi-cols">
+
+        <div class="kpi-col">
+
+          <div class="ver-name">COL</div>
+
+          <div class="ver-val">93.2%</div>
+
+          <div class="ver-lm pos">LM: ▲ +5.2pp</div>
+
+          <div class="ver-delta pos">TG: ▲ +3.2pp</div>
+
+        </div>
+
+        <div class="kpi-col">
+
+          <div class="ver-name">DOM</div>
+
+          <div class="ver-val">95.0%</div>
+
+          <div class="ver-lm pos">LM: ▲ +3.4pp</div>
+
+          <div class="ver-delta pos">TG: ▲ +5.0pp</div>
+
+        </div>
+
+        <div class="kpi-col">
+
+          <div class="ver-name">MEX</div>
+
+          <div class="ver-val">96.1%</div>
+
+          <div class="ver-lm pos">LM: ▲ +2.1pp</div>
+
+          <div class="ver-delta pos">TG: ▲ +6.1pp</div>
+
+        </div>
+
+        <div class="kpi-col">
+
+          <div class="ver-name">CRI</div>
+
+          <div class="ver-val">94.4%</div>
+
+          <div class="ver-lm pos">LM: ▲ +3.4pp</div>
+
+          <div class="ver-delta pos">TG: ▲ +4.4pp</div>
+
+        </div>
+
+      </div>
+
+      <div class="chart-area">
+
+        <div class="legend-row">
+
+          <span><span class="legend-dash"></span>2025</span>
+
+          <span><span class="legend-dot" style="background:#E8731A;"></span>2026</span>
+
+          <span><span class="legend-dot" style="background:#ccc;"></span>Target 90%</span>
+
+        </div>
+
+        <canvas id="nsmGLO" height="100"></canvas>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- NSM CORE + LITE -->
+
+    <div class="two-col">
+
+      <div class="card">
+
+        <div class="card-header">
+
+          <div class="card-title">NSM <span class="core">CORE</span></div>
+
+          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
+
+        </div>
+
+        <div class="kpi-cols">
+
+          <div class="kpi-col">
+
+            <div class="ver-name">COL</div>
+
+            <div class="ver-val sm">96.0%</div>
+
+            <div class="ver-lm pos">LM: ▲ +4.9pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +6.0pp</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">DOM</div>
+
+            <div class="ver-val sm">97.7%</div>
+
+            <div class="ver-lm pos">LM: ▲ +3.6pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +7.7pp</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">MEX</div>
+
+            <div class="ver-val sm">99.0%</div>
+
+            <div class="ver-lm pos">LM: ▲ +2.9pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +9.0pp</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">CRI</div>
+
+            <div class="ver-val sm">93.9%</div>
+
+            <div class="ver-lm neg">LM: ▼ −1.1pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +3.9pp</div>
+
+          </div>
+
+        </div>
+
+        <div class="chart-area">
+
+          <div class="legend-row">
+
+            <span><span class="legend-dash"></span>2025</span>
+
+            <span><span class="legend-dot" style="background:#2d7a4f;"></span>2026</span>
+
+          </div>
+
+          <canvas id="nsmCORE" height="80"></canvas>
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
+        <div class="card-header">
+
+          <div class="card-title">NSM <span class="lite">LITE</span></div>
+
+          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
+
+        </div>
+
+        <div class="kpi-cols">
+
+          <div class="kpi-col">
+
+            <div class="ver-name">COL</div>
+
+            <div class="ver-val sm">91.4%</div>
+
+            <div class="ver-lm pos">LM: ▲ +5.3pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +1.4pp</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">DOM</div>
+
+            <div class="ver-val sm">93.2%</div>
+
+            <div class="ver-lm pos">LM: ▲ +3.3pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +3.2pp</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">MEX</div>
+
+            <div class="ver-val sm">94.1%</div>
+
+            <div class="ver-lm pos">LM: ▲ +1.5pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +4.1pp</div>
+
+          </div>
+
+          <div class="kpi-col">
+
+            <div class="ver-name">CRI</div>
+
+            <div class="ver-val sm">94.8%</div>
+
+            <div class="ver-lm pos">LM: ▲ +6.2pp</div>
+
+            <div class="ver-delta pos">TG: ▲ +4.8pp</div>
+
+          </div>
+
+        </div>
+
+        <div class="chart-area">
+
+          <div class="legend-row">
+
+            <span><span class="legend-dash"></span>2025</span>
+
+            <span><span class="legend-dot" style="background:#1e5fa8;"></span>2026</span>
+
+          </div>
+
+          <canvas id="nsmLITE" height="80"></canvas>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div><!-- /section what -->
+
+
+
+  <div class="divider"></div>
+
+
+
+  <!-- ② SO WHAT -->
+
+  <div class="section">
+
+    <div class="section-title">② So What — ¿Por qué estos resultados?</div>
+
+    <div class="sw-item">💰 <strong>Crecimiento Ajustado USD (+3.35%):</strong> El recaudo bruto de marzo contiene el ingreso retrasado de Bancolombia por la caída al cierre del mes pasado; al reasignar el revenue al mes de origen, obtenemos el crecimiento efectivo.</div>
+
+    <div class="sw-item">📊 Tuvimos aumento en new adds (<strong>+$48K USD</strong>), recovery de facturas pendientes (<strong>+$33K USD</strong>) y upgrades (<strong>+$7.5K USD</strong>).</div>
+
+    <div class="sw-item">📈 <strong>+5% en eficiencias.</strong> Marzo tuvo buen performance, y la diferencia se infla por la acumulación de ciclos al cierre de febrero.</div>
+
+    <div class="sw-item">🧟 <strong>Proyección churn: Se proyecta en 4.06%</strong> (−1.19% vs febrero). A la fecha, tenemos +299 reactivados y −56 retiros, gap positivo que estimamos mantener mediante campañas de gestión ya activas con Retention.</div>
+
+    <div class="sw-item">🕵️ <strong>Distorsión del churn:</strong> El 47% de los retiros delinquent por mes se reactivan al mes siguiente, inflando el churn. Para combatirlos, ya escalamos la estrategia a Producto y coordinaremos su ejecución con prioridad.</div>
+
+    <div class="sw-item">📊 La proporción del New MRR por anualidades se repuso respecto a febrero y subiendo hasta <strong>15.74%</strong> para marzo; a nivel general, también aumentamos el ticket promedio.</div>
+
+  </div>
+
+
+
+  <div class="divider"></div>
+
+
+
+  <!-- ③ NOW WHAT -->
+
+  <div class="section">
+
+    <div class="section-title">③ Now What — Próximos Pasos</div>
+
+    <div class="nw-item">
+
+      <div class="nw-title">🧩 Mapeo de Rechazos</div>
+
+      <div class="nw-desc">Optimización avanzada. Los últimos casos atípicos ya se encuentran en revisión cruzada con el equipo de Conversion.</div>
+
+    </div>
+
+    <div class="nw-item">
+
+      <div class="nw-title">🔄 Control de Reactivaciones</div>
+
+      <div class="nw-desc">En sinergia con Reactivation y Loyalty, buscamos implementar el PopUp limitante en usuarios reincidentes, con esto, estimamos mitigar la distorsión que generan en la métrica de churn.</div>
+
+    </div>
+
+    <div class="nw-item">
+
+      <div class="nw-title">🔇 Churn Silencioso</div>
+
+      <div class="nw-desc">Seguimos analizándolo para identificar patrones de abandono pasivo e impulsar nuevas estrategias junto a Producto.</div>
+
+    </div>
+
+    <div class="nw-item">
+
+      <div class="nw-title">🤖 IA en MBR</div>
+
+      <div class="nw-desc">Mejoramos la extracción y consolidación de datos con Claude Code y NotebookLM. Actualmente trabajamos con el equipo de Data para escalar la solución y subsanar limitantes de arquitectura y permisos.</div>
+
+    </div>
+
+    <div class="nw-item">
+
+      <div class="nw-title">💳 Estrategias en Producción</div>
+
+      <div class="nw-desc">Llevamos evaluación continua de los experimentos activos con Loyalty (cobro a segundas cuentas y gestión de hard declines en República Dominicana).</div>
+
+    </div>
+
+    <div class="nw-item">
+
+      <div class="nw-title">🌐 Orquestador de Pagos</div>
+
+      <div class="nw-desc">Integración en curso de Kushki y OpenPay para robustecer el ruteo inteligente de transacciones y maximizar nuestra tasa de aprobación.</div>
+
+    </div>
+
+  </div>
+
+
+
+  <div class="divider"></div>
+
+
+
+  <!-- ④ ADICIONALES -->
+
+  <div class="section">
+
+    <div class="section-title">④ Análisis Adicionales</div>
+
+
+
+    <!-- BRIDGE -->
+
+    <div class="bridge-row-charts">
+
+      <div class="bridge-card">
+
+        <div class="bridge-card-title">Feb 2026 — GLO Revenue Bridge <span style="font-weight:400;color:#999;">(miles USD)</span></div>
+
+        <div class="bridge-chart-area"><canvas id="bridgeFEB" height="220"></canvas></div>
+
+      </div>
+
+      <div class="bridge-card">
+
+        <div class="bridge-card-title">Mar 2026 — GLO Revenue Bridge <span style="font-weight:400;color:#999;">(miles USD)</span></div>
+
+        <div class="bridge-chart-area"><canvas id="bridgeMAR" height="220"></canvas></div>
+
+      </div>
+
+    </div>
+
+    <div class="bridge-summary">
+
+      Marzo tuvo impulso principalmente de <strong>new adds</strong> y la recuperación de <strong>ciclos pendientes de febrero</strong>. Este mes trajimos más logos, con ticket superior, mejorando el <strong>New ARPA</strong> y recolectamos más de ciclos de cohortes anteriores por la acumulación de ciclos al cierre de febrero (<strong>Efecto calendario</strong>).
+
+    </div>
+
+
+
+    <!-- PROYECCIÓN -->
+
+    <div style="margin-top:22px;">
+
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#0D1B2A;margin-bottom:12px;">Proyección Recaudo — Abril 2026</div>
+
+      <div class="proj-bullets">
+
+        <ul>
+
+          <li>Las facturas pendientes de febrero inflaron la proyección de marzo. Sin mora, crecemos 2.37% (52K USD).</li>
+
+          <li>Las versiones principales crecen en moneda local.</li>
+
+          <li>La baja de CRI representa $85 USD, condensada entre planes contador y tienda.</li>
+
+          <li>El peso mexicano se apreció un 3.83% durante marzo, haciendo que proyectemos menos en USD.</li>
+
+        </ul>
+
+      </div>
+
+      <table class="pt">
+
+        <thead><tr><th>Versión</th><th>Forecast USD</th><th>Δ% Prods</th><th>Δ% Revenue</th><th>Δ% USD</th></tr></thead>
+
+        <tbody>
+
+          <tr><td>COL</td><td><strong>$1,491,716</strong></td><td class="pos">▲ +3.82%</td><td class="neg">▼ −0.53%</td><td class="pos">▲ +0.33%</td></tr>
+
+          <tr class="sub"><td>└ Mensual</td><td>$1,322,941</td><td class="pos">▲ +4.13%</td><td class="pos">▲ +1.15%</td><td class="pos">▲ +2.03%</td></tr>
+
+          <tr class="sub"><td>└ Anual</td><td>$168,775</td><td class="neg">▼ −15.47%</td><td class="neg">▼ −11.98%</td><td class="neg">▼ −11.21%</td></tr>
+
+          <tr><td>DOM</td><td><strong>$401,642</strong></td><td class="pos">▲ +6.30%</td><td class="pos">▲ +5.84%</td><td class="pos">▲ +5.84%</td></tr>
+
+          <tr class="sub"><td>└ Mensual</td><td>$372,215</td><td class="pos">▲ +6.35%</td><td class="pos">▲ +7.05%</td><td class="pos">▲ +7.06%</td></tr>
+
+          <tr class="sub"><td>└ Anual</td><td>$29,426</td><td class="neu">→ 0.00%</td><td class="neg">▼ −7.48%</td><td class="neg">▼ −7.48%</td></tr>
+
+          <tr><td>MEX</td><td><strong>$221,039</strong></td><td class="pos">▲ +4.98%</td><td class="pos">▲ +4.83%</td><td class="neg">▼ −0.43%</td></tr>
+
+          <tr class="sub"><td>└ Mensual</td><td>$191,011</td><td class="pos">▲ +5.26%</td><td class="pos">▲ +5.11%</td><td class="neg">▼ −0.16%</td></tr>
+
+          <tr class="sub"><td>└ Anual</td><td>$30,029</td><td class="neg">▼ −13.11%</td><td class="pos">▲ +3.03%</td><td class="neg">▼ −2.13%</td></tr>
+
+          <tr><td>CRI</td><td><strong>$71,488</strong></td><td class="pos">▲ +2.46%</td><td class="pos">▲ +9.37%</td><td class="pos">▲ +9.37%</td></tr>
+
+          <tr class="sub"><td>└ Mensual</td><td>$62,061</td><td class="pos">▲ +1.91%</td><td class="neg">▼ −0.14%</td><td class="neg">▼ −0.14%</td></tr>
+
+          <tr class="sub"><td>└ Anual</td><td>$9,427</td><td class="pos">▲ +80.00%</td><td class="pos">▲ +193.07%</td><td class="pos">▲ +192.99%</td></tr>
+
+        </tbody>
+
+      </table>
+
+      <p style="font-size:10px;color:#bbb;margin-top:6px;">* Δ% Revenue = cambio en moneda local vs Mar 2026 &nbsp;·&nbsp; Δ% USD = cambio en dólares vs Mar 2026 &nbsp;·&nbsp; Total GLO (todas las versiones): <strong style="color:#555;">$2,355,699</strong> (+0.5% vs proyección anterior)</p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- FOOTER -->
+
+  <div class="footer">

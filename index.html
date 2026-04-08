@@ -4,30 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MBR Alegra Collection — Marzo 2026</title>
+  
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   
   <style>
-    /* 1. RESET Y FONDO GRIS */
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
     body { 
-      background: #f0f2f5; /* Gris claro de fondo */
+      background: #f0f2f5; /* Fondo gris claro */
       font-family: 'Segoe UI', Arial, sans-serif; 
       color: #1a1a2e; 
-      padding: 40px 15px; /* Espacio arriba y abajo para que no pegue al borde */
+      padding: 40px 15px; /* Espacio arriba y abajo para que respire */
     }
 
-    /* 2. EL CONTENEDOR TIPO "TARJETA" */
+    /* Contenedor tipo "Tarjeta" centrada */
     .wrapper { 
-      max-width: 850px; /* Ancho controlado */
-      margin: 0 auto;   /* Centrado automático */
+      max-width: 850px; 
+      margin: 0 auto; 
       background: #fff; 
-      border-radius: 12px; /* Bordes redondeados */
+      border-radius: 12px; 
       overflow: hidden;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08); /* Sombra para dar profundidad */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra elegante */
     }
 
-    /* ─── HEADER ─── */
     .header { background: #0D1B2A; padding: 28px 36px 22px; display: flex; justify-content: space-between; align-items: flex-start; }
     .header-brand { color: #fff; }
     .header-brand .logo { font-size: 22px; font-weight: 800; letter-spacing: 2px; }
@@ -37,7 +36,6 @@
     .header-meta .date   { font-size: 11px; color: #6a9dc8; margin-top: 4px; }
     .header-intro { background: #0D1B2A; padding: 0 36px 24px; font-size: 12px; color: #a8c4dc; line-height: 1.6; }
 
-    /* ─── KPI BAR ─── */
     .kpi-bar { background: #1e3a5f; display: flex; }
     .kpi-tile { flex: 1; padding: 16px 20px; text-align: center; border-right: 1px solid #2a4f7a; }
     .kpi-tile:last-child { border-right: none; }
@@ -45,57 +43,64 @@
     .kpi-value { font-size: 22px; font-weight: 800; color: #fff; margin-top: 4px; }
     .kpi-delta { font-size: 11px; margin-top: 2px; }
 
-    /* ─── SECTION TITLE ─── */
     .section { padding: 28px 32px 0; }
     .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #0D1B2A; padding-bottom: 8px; border-bottom: 2px solid #0D1B2A; margin-bottom: 20px; }
     .divider { height: 1px; background: #eef0f3; margin: 28px 0; }
 
-    /* ─── METRIC CARD ─── */
     .card { border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; margin-bottom: 16px; background: #fff; }
     .card-header { padding: 12px 16px 8px; border-bottom: 1px solid #eef0f3; }
     .card-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0D1B2A; }
-    .card-title .glo  { color: #E8731A; }
-    .card-title .core { color: #2d7a4f; }
-    .card-title .lite { color: #1e5fa8; }
-    .card-sub { font-size: 10px; color: #aaa; margin-top: 2px; }
     .kpi-cols { display: flex; border-bottom: 1px solid #f0f2f5; }
     .kpi-col { flex: 1; padding: 12px 8px; text-align: center; border-right: 1px solid #f0f2f5; }
     .kpi-col:last-child { border-right: none; }
-    .ver-name  { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-    .ver-val   { font-size: 16px; font-weight: 800; color: #0D1B2A; line-height: 1.1; }
-    .ver-val.sm { font-size: 13px; }
-    .ver-lm    { font-size: 10px; margin-top: 4px; }
-    .ver-delta { font-size: 10px; margin-top: 1px; }
+    .ver-name  { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 1px; }
+    .ver-val   { font-size: 16px; font-weight: 800; color: #0D1B2A; }
     .pos { color: #00897B; font-weight: 700; }
-    .neg { color: #D50000; font-weight: 700; }
-    .neu { color: #888; }
     .chart-area { padding: 12px 16px 8px; }
-    .legend-row { display: flex; gap: 14px; margin-bottom: 6px; font-size: 10px; color: #888; align-items: center; }
-    .legend-dot { display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
-    .legend-dash { display: inline-block; width: 10px; height: 2px; border-radius: 1px; margin-right: 4px; vertical-align: middle; background: repeating-linear-gradient(to right, #bbb 0, #bbb 4px, transparent 4px, transparent 7px); }
+    .footer { background: #0D1B2A; padding: 24px 32px; margin-top: 36px; font-size: 12px; color: #8ab4d4; }
+  </style>
 
-    .two-col { display: flex; gap: 12px; margin-bottom: 0; }
-    .two-col > * { flex: 1; min-width: 0; }
-    .insight-box { background: #f8f9fc; border-left: 3px solid #E8731A; padding: 10px 14px; margin: 4px 0 14px; font-size: 12px; color: #444; line-height: 1.7; }
-    .insight-box strong { color: #0D1B2A; }
-    .formula-box { background: #f0f4f8; border: 1px dashed #aac0d8; border-radius: 6px; padding: 8px 12px; margin: 8px 16px 4px; font-size: 11px; color: #444; line-height: 1.7; }
-    .formula-box strong { color: #1e3a5f; }
-    .sw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; font-size: 13px; line-height: 1.6; color: #333; }
-    .sw-item:last-child { border-bottom: none; }
-    .nw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; }
-    .nw-item:last-child { border-bottom: none; }
-    .nw-title { font-weight: 700; color: #0D1B2A; font-size: 13px; }
-    .nw-desc  { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.5; }
-    .bridge-row-charts { display: flex; gap: 12px; }
-    .bridge-card { flex: 1; border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; min-width: 0; }
-    .bridge-card-title { padding: 10px 14px 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #0D1B2A; border-bottom: 1px solid #eef0f3; }
-    .bridge-chart-area { padding: 10px 8px 6px; }
-    .bridge-summary { background: #f0fafa; border-left: 3px solid #45b6c5; padding: 10px 14px; margin-top: 12px; font-size: 12px; color: #444; line-height: 1.7; }
-    .bridge-summary strong { color: #0D1B2A; }
+  <script>
+    (function() {
+      // Bloqueamos la vista inmediatamente
+      const styleTag = document.createElement('style');
+      styleTag.innerHTML = 'body { display: none !important; }';
+      document.head.appendChild(styleTag);
 
-    table.pt { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 0; }
-    table.pt th { background: #1e3a5f; color: #fff; padding: 7px 8px; text-align: center; }
-    table.pt th:first-child { text-align: left; }
-    table.pt td { padding: 5px 8px; text-align: center; border-bottom: 1px solid #eef0f3; }
-    table.pt td:first-child { text-align: left; font-weight: 700; }
-    table.pt tr.sub
+      const email = prompt("🔒 ACCESO RESTRINGIDO - ALEGRA\nIngresa tu correo @alegra.com:");
+
+      if (email && email.toLowerCase().endsWith("@alegra.com")) {
+        styleTag.remove(); // Desbloqueamos si es válido
+      } else {
+        alert("Acceso denegado.");
+        document.documentElement.innerHTML = '<body style="background:#0D1B2A;color:white;display:flex;justify-content:center;align-items:center;height:100vh;font-family:sans-serif;"><h1>🔒 Solo personal de Alegra</h1></body>';
+      }
+    })();
+  </script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="header">
+    <div class="header-brand">
+      <div class="logo">ALEGRA</div>
+      <div class="sub">MBR · Collection</div>
+    </div>
+    <div class="header-meta">
+      <div class="period">Marzo 2026</div>
+      <div class="date">8 de abril de 2026</div>
+    </div>
+  </div>
+
+  <div class="header-intro">
+    Hola equipo, compartimos los resultados de marzo 2026 para el área de Collection.
+  </div>
+
+  <div class="kpi-bar">
+    <div class="kpi-tile">
+      <div class="kpi-label">Recaudo GLO</div>
+      <div class="kpi-value">$2,420,025</div>
+      <div class="kpi-delta pos">▲ +5.6%</div>
+    </div>
+    <div class="kpi-tile">
+      <div class="k

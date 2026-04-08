@@ -10,10 +10,8 @@
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     
-    /* Agregamos padding al body para que el contenedor no toque los bordes superior/inferior */
     body { background: #f0f2f5; font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; padding: 40px 15px; }
     
-    /* Le damos un toque de borde redondeado y sombra para que parezca una hoja flotante */
     .wrapper { max-width: 780px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
 
     /* ─── HEADER ─── */
@@ -37,4 +35,611 @@
     /* ─── SECTION TITLE ─── */
     .section { padding: 28px 32px 0; }
     .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #0D1B2A; padding-bottom: 8px; border-bottom: 2px solid #0D1B2A; margin-bottom: 20px; }
-    .divider { height: 1px; background: #
+    .divider { height: 1px; background: #eef0f3; margin: 28px 0; }
+
+    /* ─── METRIC CARD ─── */
+    .card { border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; margin-bottom: 16px; background: #fff; }
+    .card-header { padding: 12px 16px 8px; border-bottom: 1px solid #eef0f3; }
+    .card-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0D1B2A; }
+    .card-title .glo  { color: #E8731A; }
+    .card-title .core { color: #2d7a4f; }
+    .card-title .lite { color: #1e5fa8; }
+    .card-sub { font-size: 10px; color: #aaa; margin-top: 2px; }
+    .kpi-cols { display: flex; border-bottom: 1px solid #f0f2f5; }
+    .kpi-col { flex: 1; padding: 12px 8px; text-align: center; border-right: 1px solid #f0f2f5; }
+    .kpi-col:last-child { border-right: none; }
+    .ver-name  { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+    .ver-val   { font-size: 16px; font-weight: 800; color: #0D1B2A; line-height: 1.1; }
+    .ver-val.sm { font-size: 13px; }
+    .ver-lm    { font-size: 10px; margin-top: 4px; }
+    .ver-delta { font-size: 10px; margin-top: 1px; }
+    .pos { color: #00897B; font-weight: 700; }
+    .neg { color: #D50000; font-weight: 700; }
+    .neu { color: #888; }
+    .chart-area { padding: 12px 16px 8px; }
+    .legend-row { display: flex; gap: 14px; margin-bottom: 6px; font-size: 10px; color: #888; align-items: center; }
+    .legend-dot { display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
+    .legend-dash { display: inline-block; width: 10px; height: 2px; border-radius: 1px; margin-right: 4px; vertical-align: middle; background-repeating-linear-gradient(to right, #bbb 0, #bbb 4px, transparent 4px, transparent 6px); }
+
+    /* ─── TWO-COL ─── */
+    .two-col { display: flex; gap: 12px; margin-bottom: 0; }
+    .two-col > * { flex: 1; min-width: 0; }
+
+    /* ─── INSIGHT BOX ─── */
+    .insight-box { background: #f8f9fc; border-left: 3px solid #E8731A; padding: 10px 14px; margin: 4px 0 14px; font-size: 12px; color: #444; line-height: 1.7; }
+    .insight-box strong { color: #0D1B2A; }
+
+    /* ─── FORMULA BOX ─── */
+    .formula-box { background: #f0f4f8; border: 1px dashed #aac0d8; border-radius: 6px; padding: 8px 12px; margin: 8px 16px 4px; font-size: 11px; color: #444; line-height: 1.7; }
+    .formula-box strong { color: #1e3a5f; }
+
+    /* ─── SO WHAT / NOW WHAT ─── */
+    .sw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; font-size: 13px; line-height: 1.6; color: #333; }
+    .sw-item:last-child { border-bottom: none; }
+    .nw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; }
+    .nw-item:last-child { border-bottom: none; }
+    .nw-title { font-weight: 700; color: #0D1B2A; font-size: 13px; }
+    .nw-desc  { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.5; }
+
+    /* ─── BRIDGE ─── */
+    .bridge-row-charts { display: flex; gap: 12px; }
+    .bridge-card { flex: 1; border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; min-width: 0; }
+    .bridge-card-title { padding: 10px 14px 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #0D1B2A; border-bottom: 1px solid #eef0f3; }
+    .bridge-chart-area { padding: 10px 8px 6px; }
+    .bridge-summary { background: #f0fafa; border-left: 3px solid #45b6c5; padding: 10px 14px; margin-top: 12px; font-size: 12px; color: #444; line-height: 1.7; }
+    .bridge-summary strong { color: #0D1B2A; }
+
+    /* ─── PROJ TABLE ─── */
+    table.pt { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 0; }
+    table.pt th { background: #1e3a5f; color: #fff; padding: 7px 8px; text-align: center; }
+    table.pt th:first-child { text-align: left; }
+    table.pt td { padding: 5px 8px; text-align: center; border-bottom: 1px solid #eef0f3; }
+    table.pt td:first-child { text-align: left; font-weight: 700; }
+    table.pt tr.sub td { color: #666; padding-left: 18px; background: #fafbfc; font-weight: 400; }
+    table.pt tr.sub td:first-child { font-weight: 400; }
+    .proj-bullets { background: #f8f9fc; border-radius: 6px; border-left: 3px solid #1e5fa8; padding: 10px 14px; margin-bottom: 14px; font-size: 12px; color: #444; line-height: 1.8; }
+    .proj-bullets ul { list-style: none; padding: 0; }
+    .proj-bullets li { padding-left: 12px; position: relative; }
+    .proj-bullets li::before { content: '•'; color: #1e5fa8; font-weight: bold; position: absolute; left: 0; }
+
+    /* ─── FOOTER ─── */
+    .footer { background: #0D1B2A; padding: 24px 32px; margin-top: 36px; font-size: 12px; color: #8ab4d4; line-height: 1.8; }
+    
+    /* ─── ESTILOS PANTALLA LOGIN ─── */
+    .login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0D1B2A; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+    .login-box { background: #1e3a5f; padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 400px; width: 90%; }
+    .login-box input { width: 100%; padding: 12px; border: none; border-radius: 6px; margin-bottom: 15px; text-align: center; font-size: 14px; outline: none; }
+    .login-box button { width: 100%; padding: 12px; background: #E8731A; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px; transition: 0.2s; }
+    .login-box button:hover { background: #d66512; }
+  </style>
+</head>
+
+<body>
+
+<div id="login-screen" class="login-overlay">
+  <div class="login-box">
+    <div style="font-size: 40px; margin-bottom: 10px;">🔒</div>
+    <h2 style="color: #fff; margin-bottom: 10px;">Acceso Restringido</h2>
+    <p style="color: #a8c4dc; font-size: 13px; margin-bottom: 25px;">Este informe es confidencial. Por favor, verifica tu identidad.</p>
+    
+    <input type="email" id="email-input" placeholder="tu.nombre@alegra.com">
+    <button onclick="validarAcceso()">Ver Reporte</button>
+    
+    <p id="error-msg" style="color: #ff6b6b; font-size: 12px; margin-top: 15px; display: none;">❌ Correo inválido. Debe terminar en @alegra.com</p>
+  </div>
+</div>
+
+<div id="report-content" style="display: none;">
+  <div class="wrapper">
+
+    <div class="header">
+      <div class="header-brand">
+        <div class="logo">ALEGRA</div>
+        <div class="sub">Monthly Business Review · Collection</div>
+      </div>
+      <div class="header-meta">
+        <div class="period">Marzo 2026</div>
+        <div class="date">8 de abril de 2026</div>
+      </div>
+    </div>
+    <div class="header-intro">
+      Hola equipo, compartimos los resultados de <strong style="color:#fff;">marzo 2026</strong> para el área de Collection — recaudo, eficiencia transaccional, drivers del mes y próximos pasos.
+    </div>
+
+    <div class="kpi-bar">
+      <div class="kpi-tile">
+        <div class="kpi-label">Recaudo GLO</div>
+        <div class="kpi-value">$2,420,025</div>
+        <div class="kpi-delta pos">▲ +5.6% vs Feb</div>
+      </div>
+      <div class="kpi-tile">
+        <div class="kpi-label">NSM Global</div>
+        <div class="kpi-value">93.8%</div>
+        <div class="kpi-delta pos">▲ +4.6pp vs Feb</div>
+      </div>
+      <div class="kpi-tile">
+        <div class="kpi-label">Proyección Abril</div>
+        <div class="kpi-value">$2,355,699</div>
+        <div class="kpi-delta pos">▲ +0.5% vs proyección anterior</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">① What — Resultados Marzo 2026</div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title">RECAUDO <span class="glo">GLO</span></div>
+          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
+        </div>
+        <div class="kpi-cols">
+          <div class="kpi-col">
+            <div class="ver-name">COL</div>
+            <div class="ver-val">$1,565,751</div>
+            <div class="ver-lm pos">LM: ▲ +4.6%</div>
+            <div class="ver-delta pos">Δ: ▲ +$69,027</div>
+          </div>
+          <div class="kpi-col">
+            <div class="ver-name">DOM</div>
+            <div class="ver-val">$411,608</div>
+            <div class="ver-lm pos">LM: ▲ +11.8%</div>
+            <div class="ver-delta pos">Δ: ▲ +$43,408</div>
+          </div>
+          <div class="kpi-col">
+            <div class="ver-name">MEX</div>
+            <div class="ver-val">$222,792</div>
+            <div class="ver-lm pos">LM: ▲ +3.5%</div>
+            <div class="ver-delta pos">Δ: ▲ +$7,477</div>
+          </div>
+          <div class="kpi-col">
+            <div class="ver-name">CRI</div>
+            <div class="ver-val">$71,933</div>
+            <div class="ver-lm pos">LM: ▲ +11.8%</div>
+            <div class="ver-delta pos">Δ: ▲ +$7,600</div>
+          </div>
+        </div>
+        <div class="chart-area">
+          <div class="legend-row">
+            <span><span class="legend-dash"></span>2025</span>
+            <span><span class="legend-dot" style="background:#E8731A;"></span>2026</span>
+          </div>
+          <canvas id="recGLO" height="100"></canvas>
+        </div>
+      </div>
+      <div class="insight-box">
+        <strong>$2,420K USD (+5.65% vs Febrero).</strong> Este mes recaudamos $2,420K USD a través de 54.6K transacciones. Comparado con el mes anterior es un +50K (5.65%) en USD y un aumento del <strong>+25.26% vs el año anterior</strong>. Marzo tuvo buen performance per se; y también se ve impulsado por crecimiento de new adds, facturas pendientes de febrero y upgrades.
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">RECAUDO <span class="core">CORE</span></div>
+            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
+          </div>
+          <div class="kpi-cols">
+            <div class="kpi-col">
+              <div class="ver-name">COL</div>
+              <div class="ver-val sm">$920,775</div>
+              <div class="ver-lm pos">LM: ▲ +3.8%</div>
+              <div class="ver-delta pos">Δ: +$33,984</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">DOM</div>
+              <div class="ver-val sm">$230,956</div>
+              <div class="ver-lm pos">LM: ▲ +11.4%</div>
+              <div class="ver-delta pos">Δ: +$23,561</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">MEX</div>
+              <div class="ver-val sm">$125,066</div>
+              <div class="ver-lm pos">LM: ▲ +1.1%</div>
+              <div class="ver-delta pos">Δ: +$1,355</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">CRI</div>
+              <div class="ver-val sm">$36,861</div>
+              <div class="ver-lm pos">LM: ▲ +7.2%</div>
+              <div class="ver-delta pos">Δ: +$2,481</div>
+            </div>
+          </div>
+          <div class="chart-area">
+            <div class="legend-row">
+              <span><span class="legend-dash"></span>2025</span>
+              <span><span class="legend-dot" style="background:#2d7a4f;"></span>2026</span>
+            </div>
+            <canvas id="recCORE" height="80"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">RECAUDO <span class="lite">LITE</span></div>
+            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
+          </div>
+          <div class="kpi-cols">
+            <div class="kpi-col">
+              <div class="ver-name">COL</div>
+              <div class="ver-val sm">$644,976</div>
+              <div class="ver-lm pos">LM: ▲ +5.7%</div>
+              <div class="ver-delta pos">Δ: +$35,043</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">DOM</div>
+              <div class="ver-val sm">$180,652</div>
+              <div class="ver-lm pos">LM: ▲ +12.3%</div>
+              <div class="ver-delta pos">Δ: +$19,847</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">MEX</div>
+              <div class="ver-val sm">$97,726</div>
+              <div class="ver-lm pos">LM: ▲ +6.7%</div>
+              <div class="ver-delta pos">Δ: +$6,122</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">CRI</div>
+              <div class="ver-val sm">$35,072</div>
+              <div class="ver-lm pos">LM: ▲ +17.1%</div>
+              <div class="ver-delta pos">Δ: +$5,119</div>
+            </div>
+          </div>
+          <div class="chart-area">
+            <div class="legend-row">
+              <span><span class="legend-dash"></span>2025</span>
+              <span><span class="legend-dot" style="background:#1e5fa8;"></span>2026</span>
+            </div>
+            <canvas id="recLITE" height="80"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:8px;">
+        <div class="card-header">
+          <div class="card-title">EFICIENCIA TRANSACCIONAL (NSM) <span class="glo">GLO</span></div>
+          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
+        </div>
+        <div class="formula-box">
+          <strong>Fórmula:</strong> Eficiencia transaccional = Transacciones exitosas de los usuarios proyectados / Transacciones proyectadas a cobrar para el mes<br>
+          <strong>Ejemplo:</strong> Si de 10 usuarios proyectados le cobramos a 9 y 1 fue retirado, la eficiencia sería del 90%.
+        </div>
+        <div class="kpi-cols">
+          <div class="kpi-col">
+            <div class="ver-name">COL</div>
+            <div class="ver-val">93.2%</div>
+            <div class="ver-lm pos">LM: ▲ +5.2pp</div>
+            <div class="ver-delta pos">TG: ▲ +3.2pp</div>
+          </div>
+          <div class="kpi-col">
+            <div class="ver-name">DOM</div>
+            <div class="ver-val">95.0%</div>
+            <div class="ver-lm pos">LM: ▲ +3.4pp</div>
+            <div class="ver-delta pos">TG: ▲ +5.0pp</div>
+          </div>
+          <div class="kpi-col">
+            <div class="ver-name">MEX</div>
+            <div class="ver-val">96.1%</div>
+            <div class="ver-lm pos">LM: ▲ +2.1pp</div>
+            <div class="ver-delta pos">TG: ▲ +6.1pp</div>
+          </div>
+          <div class="kpi-col">
+            <div class="ver-name">CRI</div>
+            <div class="ver-val">94.4%</div>
+            <div class="ver-lm pos">LM: ▲ +3.4pp</div>
+            <div class="ver-delta pos">TG: ▲ +4.4pp</div>
+          </div>
+        </div>
+        <div class="chart-area">
+          <div class="legend-row">
+            <span><span class="legend-dash"></span>2025</span>
+            <span><span class="legend-dot" style="background:#E8731A;"></span>2026</span>
+            <span><span class="legend-dot" style="background:#ccc;"></span>Target 90%</span>
+          </div>
+          <canvas id="nsmGLO" height="100"></canvas>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">NSM <span class="core">CORE</span></div>
+            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
+          </div>
+          <div class="kpi-cols">
+            <div class="kpi-col">
+              <div class="ver-name">COL</div>
+              <div class="ver-val sm">96.0%</div>
+              <div class="ver-lm pos">LM: ▲ +4.9pp</div>
+              <div class="ver-delta pos">TG: ▲ +6.0pp</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">DOM</div>
+              <div class="ver-val sm">97.7%</div>
+              <div class="ver-lm pos">LM: ▲ +3.6pp</div>
+              <div class="ver-delta pos">TG: ▲ +7.7pp</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">MEX</div>
+              <div class="ver-val sm">99.0%</div>
+              <div class="ver-lm pos">LM: ▲ +2.9pp</div>
+              <div class="ver-delta pos">TG: ▲ +9.0pp</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">CRI</div>
+              <div class="ver-val sm">93.9%</div>
+              <div class="ver-lm neg">LM: ▼ −1.1pp</div>
+              <div class="ver-delta pos">TG: ▲ +3.9pp</div>
+            </div>
+          </div>
+          <div class="chart-area">
+            <div class="legend-row">
+              <span><span class="legend-dash"></span>2025</span>
+              <span><span class="legend-dot" style="background:#2d7a4f;"></span>2026</span>
+            </div>
+            <canvas id="nsmCORE" height="80"></canvas>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">NSM <span class="lite">LITE</span></div>
+            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
+          </div>
+          <div class="kpi-cols">
+            <div class="kpi-col">
+              <div class="ver-name">COL</div>
+              <div class="ver-val sm">91.4%</div>
+              <div class="ver-lm pos">LM: ▲ +5.3pp</div>
+              <div class="ver-delta pos">TG: ▲ +1.4pp</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">DOM</div>
+              <div class="ver-val sm">93.2%</div>
+              <div class="ver-lm pos">LM: ▲ +3.3pp</div>
+              <div class="ver-delta pos">TG: ▲ +3.2pp</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">MEX</div>
+              <div class="ver-val sm">94.1%</div>
+              <div class="ver-lm pos">LM: ▲ +1.5pp</div>
+              <div class="ver-delta pos">TG: ▲ +4.1pp</div>
+            </div>
+            <div class="kpi-col">
+              <div class="ver-name">CRI</div>
+              <div class="ver-val sm">94.8%</div>
+              <div class="ver-lm pos">LM: ▲ +6.2pp</div>
+              <div class="ver-delta pos">TG: ▲ +4.8pp</div>
+            </div>
+          </div>
+          <div class="chart-area">
+            <div class="legend-row">
+              <span><span class="legend-dash"></span>2025</span>
+              <span><span class="legend-dot" style="background:#1e5fa8;"></span>2026</span>
+            </div>
+            <canvas id="nsmLITE" height="80"></canvas>
+          </div>
+        </div>
+      </div>
+    </div><div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">② So What — ¿Por qué estos resultados?</div>
+      <div class="sw-item">💰 <strong>Crecimiento Ajustado USD (+3.35%):</strong> El recaudo bruto de marzo contiene el ingreso retrasado de Bancolombia por la caída al cierre del mes pasado; al reasignar el revenue al mes de origen, obtenemos el crecimiento efectivo.</div>
+      <div class="sw-item">📊 Tuvimos aumento en new adds (<strong>+$48K USD</strong>), recovery de facturas pendientes (<strong>+$33K USD</strong>) y upgrades (<strong>+$7.5K USD</strong>).</div>
+      <div class="sw-item">📈 <strong>+5% en eficiencias.</strong> Marzo tuvo buen performance, y la diferencia se infla por la acumulación de ciclos al cierre de febrero.</div>
+      <div class="sw-item">🧟 <strong>Proyección churn: Se proyecta en 4.06%</strong> (−1.19% vs febrero). A la fecha, tenemos +299 reactivados y −56 retiros, gap positivo que estimamos mantener mediante campañas de gestión ya activas con Retention.</div>
+      <div class="sw-item">🕵️ <strong>Distorsión del churn:</strong> El 47% de los retiros delinquent por mes se reactivan al mes siguiente, inflando el churn. Para combatirlos, ya escalamos la estrategia a Producto y coordinaremos su ejecución con prioridad.</div>
+      <div class="sw-item">📊 La proporción del New MRR por anualidades se repuso respecto a febrero y subiendo hasta <strong>15.74%</strong> para marzo; a nivel general, también aumentamos el ticket promedio.</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">③ Now What — Próximos Pasos</div>
+      <div class="nw-item">
+        <div class="nw-title">🧩 Mapeo de Rechazos</div>
+        <div class="nw-desc">Optimización avanzada. Los últimos casos atípicos ya se encuentran en revisión cruzada con el equipo de Conversion.</div>
+      </div>
+      <div class="nw-item">
+        <div class="nw-title">🔄 Control de Reactivaciones</div>
+        <div class="nw-desc">En sinergia con Reactivation y Loyalty, buscamos implementar el PopUp limitante en usuarios reincidentes, con esto, estimamos mitigar la distorsión que generan en la métrica de churn.</div>
+      </div>
+      <div class="nw-item">
+        <div class="nw-title">🔇 Churn Silencioso</div>
+        <div class="nw-desc">Seguimos analizándolo para identificar patrones de abandono pasivo e impulsar nuevas estrategias junto a Producto.</div>
+      </div>
+      <div class="nw-item">
+        <div class="nw-title">🤖 IA en MBR</div>
+        <div class="nw-desc">Mejoramos la extracción y consolidación de datos con Claude Code y NotebookLM. Actualmente trabajamos con el equipo de Data para escalar la solución y subsanar limitantes de arquitectura y permisos.</div>
+      </div>
+      <div class="nw-item">
+        <div class="nw-title">💳 Estrategias en Producción</div>
+        <div class="nw-desc">Llevamos evaluación continua de los experimentos activos con Loyalty (cobro a segundas cuentas y gestión de hard declines en República Dominicana).</div>
+      </div>
+      <div class="nw-item">
+        <div class="nw-title">🌐 Orquestador de Pagos</div>
+        <div class="nw-desc">Integración en curso de Kushki y OpenPay para robustecer el ruteo inteligente de transacciones y maximizar nuestra tasa de aprobación.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="section">
+      <div class="section-title">④ Análisis Adicionales</div>
+
+      <div class="bridge-row-charts">
+        <div class="bridge-card">
+          <div class="bridge-card-title">Feb 2026 — GLO Revenue Bridge <span style="font-weight:400;color:#999;">(miles USD)</span></div>
+          <div class="bridge-chart-area"><canvas id="bridgeFEB" height="220"></canvas></div>
+        </div>
+        <div class="bridge-card">
+          <div class="bridge-card-title">Mar 2026 — GLO Revenue Bridge <span style="font-weight:400;color:#999;">(miles USD)</span></div>
+          <div class="bridge-chart-area"><canvas id="bridgeMAR" height="220"></canvas></div>
+        </div>
+      </div>
+      <div class="bridge-summary">
+        Marzo tuvo impulso principalmente de <strong>new adds</strong> y la recuperación de <strong>ciclos pendientes de febrero</strong>. Este mes trajimos más logos, con ticket superior, mejorando el <strong>New ARPA</strong> y recolectamos más de ciclos de cohortes anteriores por la acumulación de ciclos al cierre de febrero (<strong>Efecto calendario</strong>).
+      </div>
+
+      <div style="margin-top:22px;">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#0D1B2A;margin-bottom:12px;">Proyección Recaudo — Abril 2026</div>
+        <div class="proj-bullets">
+          <ul>
+            <li>Las facturas pendientes de febrero inflaron la proyección de marzo. Sin mora, crecemos 2.37% (52K USD).</li>
+            <li>Las versiones principales crecen en moneda local.</li>
+            <li>La baja de CRI representa $85 USD, condensada entre planes contador y tienda.</li>
+            <li>El peso mexicano se apreció un 3.83% durante marzo, haciendo que proyectemos menos en USD.</li>
+          </ul>
+        </div>
+        <table class="pt">
+          <thead><tr><th>Versión</th><th>Forecast USD</th><th>Δ% Prods</th><th>Δ% Revenue</th><th>Δ% USD</th></tr></thead>
+          <tbody>
+            <tr><td>COL</td><td><strong>$1,491,716</strong></td><td class="pos">▲ +3.82%</td><td class="neg">▼ −0.53%</td><td class="pos">▲ +0.33%</td></tr>
+            <tr class="sub"><td>└ Mensual</td><td>$1,322,941</td><td class="pos">▲ +4.13%</td><td class="pos">▲ +1.15%</td><td class="pos">▲ +2.03%</td></tr>
+            <tr class="sub"><td>└ Anual</td><td>$168,775</td><td class="neg">▼ −15.47%</td><td class="neg">▼ −11.98%</td><td class="neg">▼ −11.21%</td></tr>
+            <tr><td>DOM</td><td><strong>$401,642</strong></td><td class="pos">▲ +6.30%</td><td class="pos">▲ +5.84%</td><td class="pos">▲ +5.84%</td></tr>
+            <tr class="sub"><td>└ Mensual</td><td>$372,215</td><td class="pos">▲ +6.35%</td><td class="pos">▲ +7.05%</td><td class="pos">▲ +7.06%</td></tr>
+            <tr class="sub"><td>└ Anual</td><td>$29,426</td><td class="neu">→ 0.00%</td><td class="neg">▼ −7.48%</td><td class="neg">▼ −7.48%</td></tr>
+            <tr><td>MEX</td><td><strong>$221,039</strong></td><td class="pos">▲ +4.98%</td><td class="pos">▲ +4.83%</td><td class="neg">▼ −0.43%</td></tr>
+            <tr class="sub"><td>└ Mensual</td><td>$191,011</td><td class="pos">▲ +5.26%</td><td class="pos">▲ +5.11%</td><td class="neg">▼ −0.16%</td></tr>
+            <tr class="sub"><td>└ Anual</td><td>$30,029</td><td class="neg">▼ −13.11%</td><td class="pos">▲ +3.03%</td><td class="neg">▼ −2.13%</td></tr>
+            <tr><td>CRI</td><td><strong>$71,488</strong></td><td class="pos">▲ +2.46%</td><td class="pos">▲ +9.37%</td><td class="pos">▲ +9.37%</td></tr>
+            <tr class="sub"><td>└ Mensual</td><td>$62,061</td><td class="pos">▲ +1.91%</td><td class="neg">▼ −0.14%</td><td class="neg">▼ −0.14%</td></tr>
+            <tr class="sub"><td>└ Anual</td><td>$9,427</td><td class="pos">▲ +80.00%</td><td class="pos">▲ +193.07%</td><td class="pos">▲ +192.99%</td></tr>
+          </tbody>
+        </table>
+        <p style="font-size:10px;color:#bbb;margin-top:6px;">* Δ% Revenue = cambio en moneda local vs Mar 2026 &nbsp;·&nbsp; Δ% USD = cambio en dólares vs Mar 2026 &nbsp;·&nbsp; Total GLO (todas las versiones): <strong style="color:#555;">$2,355,699</strong> (+0.5% vs proyección anterior)</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <strong style="color:#fff;">Equipo Collection · Alegra</strong><br>
+      MBR Marzo 2026 · Generado el 8 de abril de 2026<br>
+      <span style="font-size:10px;color:#4a6f8a;">Datos: Redshift + QuickSight · Metodología alineada con QS · Sin Alanube</span>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  function validarAcceso() {
+    const input = document.getElementById('email-input').value.toLowerCase().trim();
+    if (input.endsWith('@alegra.com')) {
+      // Si es válido, ocultamos la pantalla azul y mostramos el reporte
+      document.getElementById('login-screen').style.display = 'none';
+      document.getElementById('report-content').style.display = 'block';
+    } else {
+      // Si es inválido, mostramos mensaje de error
+      document.getElementById('error-msg').style.display = 'block';
+    }
+  }
+
+  // Permitir usar la tecla "Enter" para entrar más rápido
+  document.getElementById('email-input').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') validarAcceso();
+  });
+</script>
+
+<script>
+Chart.defaults.font.family = "'Segoe UI', Arial, sans-serif";
+Chart.defaults.font.size   = 10;
+Chart.defaults.color       = '#888';
+
+const months12 = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+
+function dualLineChart(id, data2025, data2026, color, yMin, yMax, tickFmt, withTarget) {
+  const datasets = [
+    { label: '2025', data: data2025, borderColor: '#bbb', backgroundColor: 'transparent', borderWidth: 1.5, borderDash: [5, 3], pointRadius: 2, pointHoverRadius: 4, pointBackgroundColor: '#bbb', tension: 0.35, spanGaps: false },
+    { label: '2026', data: data2026, borderColor: color, backgroundColor: 'transparent', borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: color, tension: 0.35, spanGaps: false }
+  ];
+
+  if (withTarget) { datasets.push({ label: 'Target 90%', data: months12.map(() => 90), borderColor: '#ddd', borderDash: [3, 3], borderWidth: 1, pointRadius: 0, backgroundColor: 'transparent' }); }
+
+  new Chart(document.getElementById(id), {
+    type: 'line', data: { labels: months12, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { filter: ctx => ctx.parsed.y !== null, callbacks: { label: ctx => ctx.dataset.label + ': ' + tickFmt(ctx.parsed.y) } } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 9 } } }, y: { min: yMin, max: yMax, grid: { color: '#f0f0f0' }, ticks: { callback: v => tickFmt(v), font: { size: 9 }, maxTicksLimit: 4 } } }
+    }
+  });
+}
+
+function y26(vals, startIdx) { return months12.map((_, i) => (i >= startIdx && i < startIdx + vals.length) ? vals[i - startIdx] : null); }
+
+const recGLO25 = [1662.3, 1776.4, 1932.7, 1857.8, 1871.6, 1878.9, 2004.6, 1980.5, 2033.6, 2084.3, 2113.4, 2311.7];
+const recGLO26 = y26([2374.9, 2291.4, 2423.4], 0);
+const recCORE25 = [926.1, 985.7, 1065.7, 1046.0, 1053.8, 1046.1, 1138.3, 1124.2, 1158.8, 1196.0, 1223.9, 1372.2];
+const recCORE26 = y26([1416.9, 1353.0, 1435.4], 0);
+const recLITE25 = [736.1, 790.8, 867.1, 811.8, 817.8, 832.8, 866.2, 856.3, 874.8, 888.3, 889.5, 939.5];
+const recLITE26 = y26([958.0, 938.4, 988.0], 0);
+
+const nsmGLO25 = [null, null, 93.9, 92.0, 92.8, 92.3, 94.3, 92.7, 93.5, 93.9, 91.2, 94.5];
+const nsmGLO26 = y26([91.5, 89.2, 93.8], 0);
+const nsmCORE25 = [null, null, 97.7, 95.9, 96.0, 96.1, 97.5, 95.6, 96.6, 96.7, 93.6, 98.3];
+const nsmCORE26 = y26([93.2, 92.3, 96.5], 0);
+const nsmLITE25 = [null, null, 91.9, 89.9, 91.1, 90.2, 92.6, 91.0, 91.7, 92.3, 89.8, 92.3];
+const nsmLITE26 = y26([90.6, 87.3, 92.0], 0);
+
+dualLineChart('recGLO',  recGLO25,  recGLO26,  '#E8731A', 1500, 2700, v => '$'+(v/1000).toFixed(1)+'M', false);
+dualLineChart('recCORE', recCORE25, recCORE26, '#2d7a4f',  850, 1600, v => '$'+(v/1000).toFixed(1)+'M', false);
+dualLineChart('recLITE', recLITE25, recLITE26, '#1e5fa8',  600, 1200, v => '$'+(v/1000).toFixed(1)+'M', false);
+
+dualLineChart('nsmGLO',  nsmGLO25,  nsmGLO26,  '#E8731A', 85, 100, v => v.toFixed(1)+'%', true);
+dualLineChart('nsmCORE', nsmCORE25, nsmCORE26, '#2d7a4f', 88, 101, v => v.toFixed(1)+'%', true);
+dualLineChart('nsmLITE', nsmLITE25, nsmLITE26, '#1e5fa8', 85,  97, v => v.toFixed(1)+'%', true);
+
+function buildBridge(id, items) {
+  const labels   = items.map(i => i.label);
+  const floatData = items.map(i => i.type === 'zero' ? [i.base, i.base] : [Math.min(i.base, i.end), Math.max(i.base, i.end)]);
+  const colors   = items.map(i => {
+    if (i.type === 'base')  return '#2d7a4f';
+    if (i.type === 'pos')   return '#2d7a4f';
+    if (i.type === 'neg')   return '#c0392b';
+    if (i.type === 'close') return '#45b6c5';
+    return '#ccc';
+  });
+
+  new Chart(document.getElementById(id), {
+    type: 'bar',
+    data: { labels, datasets: [{ data: floatData, backgroundColor: colors, borderColor: colors, borderWidth: 0, borderRadius: 2 }] },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => { const item = items[ctx.dataIndex]; if (item.type === 'base' || item.type === 'close') return '$' + item.end.toFixed(2) + 'K'; const v = item.end - item.base; return (v >= 0 ? '+' : '') + '$' + v.toFixed(2) + 'K'; } } } },
+      scales: { x: { grid: { display: false }, ticks: { font: { size: 8 }, maxRotation: 45, minRotation: 30 } }, y: { min: 1700, max: 2900, grid: { color: '#f0f0f0' }, ticks: { callback: v => '$' + v.toFixed(0), font: { size: 9 }, maxTicksLimit: 5 } } }
+    }
+  });
+}
+
+buildBridge('bridgeFEB', [
+  { label: 'Net Rev −1',     base: 0,       end: 2371.61, type: 'base'  },
+  { label: 'Recovered P−1', base: 2371.61,  end: 2467.79, type: 'pos'   },
+  { label: 'Pricing exp.',   base: 2467.79,  end: 2467.79, type: 'zero'  },
+  { label: 'New Logos',      base: 2467.79,  end: 2645.66, type: 'pos'   },
+  { label: 'Reactivated',    base: 2645.66,  end: 2690.14, type: 'pos'   },
+  { label: 'Recovered',      base: 2690.14,  end: 2710.31, type: 'pos'   },
+  { label: 'Upgrades',       base: 2710.31,  end: 2742.02, type: 'pos'   },
+  { label: 'Efficiencies',   base: 2665.30,  end: 2742.02, type: 'neg'   },
+  { label: 'Churn',          base: 2575.74,  end: 2665.30, type: 'neg'   },
+  { label: 'Down.+Mora',     base: 2487.06,  end: 2575.74, type: 'neg'   },
+  { label: 'Opened cycles',  base: 2294.89,  end: 2487.06, type: 'neg'   },
+  { label: 'FX Rate',        base: 2294.89,  end: 2307.87, type: 'pos'   },
+  { label: 'Subs. plans',    base: 2290.29,  end: 2307.87, type: 'neg'   },
+  { label: 'Cierre Feb',     base: 0,        end: 2290.29, type: 'close' }
+]);
+
+buildBridge('bridgeMAR', [
+  { label: 'Net Rev −1',     base: 0,        end: 2290.29, type: 'base'  },
+  { label: 'Recovered P−1', base: 2290.29,   end: 2419.53, type: 'pos'   },
+  { label: 'Pricing exp.',   base: 2419.53,  end: 2419.53, type: 'zero'  },
+  { label: 'New Logos',      base: 2419.53,  end: 2634.55, type: 'pos'   },
+  { label: 'Reactivated',    base: 2634.55,  end: 2686.07, type: 'pos'   },
+  { label: 'Recovered',      base: 2686.07,  end: 2710.64, type: 'pos'   },
+  { label: 'Upgrades',       base: 2710.64,  end: 2749.02, type: 'pos'   },
+  { label: 'Efficiencies',   base: 2749.02,  end: 2811.95, type: 'pos'   },
+  { label: 'Churn',          base: 2713.70,  end: 2811.95, type: 'neg'   },
+  { label: 'Down.+Mora',     base: 2560.21,  end: 2713.70, type: 'neg'   },
+  { label: 'Opened cycles',  base: 2447.09,  end: 2560.21, type: 'neg'   },
+  { label: 'FX Rate',        base: 2421.03,  end: 2447.09, type: 'neg'   },
+  { label: 'Subs. plans',    base: 2419.37,  end: 2421.03, type: 'neg'   },
+  { label: 'Cierre Mar',     base: 0,        end: 2419.37, type: 'close' }
+]);
+</script>
+</body>
+</html>

@@ -1,645 +1,375 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBR Alegra Collection — Marzo 2026</title>
-  
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"></head>
+<body style="margin:0;padding:0;background-color:#F0F2F5;font-family:Inter,'Segoe UI',Arial,sans-serif;color:#1A1D23;">
+<table width="100%" cellpadding="0" cellspacing="0" style="background:#F0F2F5;padding:32px 0;">
+<tr><td align="center">
+<table width="680" cellpadding="0" cellspacing="0" style="background:#FFFFFF;border-radius:16px;overflow:hidden;box-shadow:0 4px 24px rgba(0,0,0,0.08);">
 
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    
-    body { background: #f0f2f5; font-family: 'Segoe UI', Arial, sans-serif; color: #1a1a2e; padding: 40px 15px; }
-    
-    .wrapper { max-width: 780px; margin: 0 auto; background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); overflow: hidden; }
+<!-- HEADER -->
+<tr><td style="background:linear-gradient(135deg,#1B2A4A 0%,#243B6E 60%,#2E518B 100%);padding:32px 40px 28px;">
+  <img src="https://drive.google.com/uc?export=view&id=1JogPFKodSsEn734nxCN2iSAjQRguEyPA" height="24" style="display:block;height:24px;margin-bottom:18px;" alt="alegra">
+  <div style="font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#7BA7E0;margin-bottom:10px;">Monthly Business Review</div>
+  <div style="font-size:28px;font-weight:700;color:#FFFFFF;line-height:1.2;margin-bottom:10px;">Collections — Abril 2026</div>
+  <table cellpadding="0" cellspacing="0"><tr><td>
+    <span style="display:inline-block;background:rgba(255,255,255,0.10);color:#A8BDD8;padding:4px 11px;border-radius:20px;font-size:12px;margin-right:6px;">📅 6 de mayo de 2026</span>
+    <span style="display:inline-block;background:rgba(255,255,255,0.10);color:#A8BDD8;padding:4px 11px;border-radius:20px;font-size:12px;">🌎 Versiones 4X4 + Others</span>
+  </td></tr></table>
+</td></tr>
 
-    /* ─── HEADER ─── */
-    .header { background: #0D1B2A; padding: 28px 36px 22px; display: flex; justify-content: space-between; align-items: flex-start; }
-    .header-brand { color: #fff; }
-    .header-brand .logo { font-size: 22px; font-weight: 800; letter-spacing: 2px; }
-    .header-brand .sub  { font-size: 10px; color: #6a9dc8; letter-spacing: 3px; text-transform: uppercase; margin-top: 4px; }
-    .header-meta { text-align: right; }
-    .header-meta .period { font-size: 20px; font-weight: 700; color: #fff; }
-    .header-meta .date   { font-size: 11px; color: #6a9dc8; margin-top: 4px; }
-    .header-intro { background: #0D1B2A; padding: 0 36px 24px; font-size: 12px; color: #a8c4dc; line-height: 1.6; }
+<!-- INTRO BAND -->
+<tr><td style="background:#F7F9FC;border-bottom:1px solid #E8ECF2;padding:20px 40px;">
+  <p style="font-size:13.5px;color:#4A5568;line-height:1.7;margin:0;">
+    ¡Hola, equipo! Les compartimos el <strong style="color:#1B2A4A;">MBR del equipo de Collections</strong>,
+    correspondiente al período <strong style="color:#1B2A4A;">Abril 2026 vs. Marzo 2026</strong>,
+    incluyendo los resultados de las versiones <strong style="color:#1B2A4A;">4X4 (COL · DOM · MEX · CRI) y Others</strong>.
+  </p>
+</td></tr>
 
-    /* ─── KPI BAR ─── */
-    .kpi-bar { background: #1e3a5f; display: flex; }
-    .kpi-tile { flex: 1; padding: 16px 20px; text-align: center; border-right: 1px solid #2a4f7a; }
-    .kpi-tile:last-child { border-right: none; }
-    .kpi-label { font-size: 10px; color: #8ab4d4; text-transform: uppercase; letter-spacing: 1px; }
-    .kpi-value { font-size: 22px; font-weight: 800; color: #fff; margin-top: 4px; }
-    .kpi-delta { font-size: 11px; margin-top: 2px; }
+<!-- BODY -->
+<tr><td style="padding:32px 40px;background:#FFFFFF;">
 
-    /* ─── SECTION TITLE ─── */
-    .section { padding: 28px 32px 0; }
-    .section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #0D1B2A; padding-bottom: 8px; border-bottom: 2px solid #0D1B2A; margin-bottom: 20px; }
-    .divider { height: 1px; background: #eef0f3; margin: 28px 0; }
+  <!-- 1. RECAUDO -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #EEF1F7;"><tr>
+  <td width="48" valign="middle"><div style="width:36px;height:36px;border-radius:10px;background:#EBF2FF;text-align:center;line-height:36px;font-size:17px;">💵</div></td>
+  <td valign="middle" style="padding-left:12px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8A94A6;margin-bottom:2px;">1 · What</div>
+    <div style="font-size:16px;font-weight:700;color:#1B2A4A;">Recaudo Abril 2026</div>
+  </td>
+</tr></table>
+  <div style="background:#F7F9FC;border-left:3px solid #00c389;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:14px;font-size:13px;color:#4A5568;line-height:1.75;">Este mes recaudamos <strong style="color:#1B2A4A;">$2.420K USD</strong> a través de <strong style="color:#1B2A4A;">53.7K transacciones</strong>. Comparado con el mes anterior es un <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">-$4.3K (0.18%)</span> en USD y un aumento del <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">+30.27% vs el año anterior</span>. Abril tuvo buen performance, impulsado por <strong style="color:#1B2A4A;">mensualidades y TRM</strong>. Su eficiencia es la <strong style="color:#1B2A4A;">2da mejor de 2026</strong> y disminuye por la diferencia de días vs marzo (Sin bajar del nivel de control).</div>
+  <div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;margin-bottom:14px;padding:18px 20px 14px;">
+  <div style="font-size:15px;font-weight:700;color:#1A1D23;margin-bottom:2px;">RECAUDO USD <span style="color:#00c389;font-weight:700;">GLO</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:16px;">LM = Last Month &nbsp;·&nbsp; Δ = Variación absoluta USD</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:14px;"><tr><td style="text-align:center;padding:0 3px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:3px;letter-spacing:0.5px;">COL</div><div style="font-size:18px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">$1.54M</div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -2%</span></div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#E53E3E;">▼ $29.8K</span></div></td><td style="text-align:center;padding:0 3px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:3px;letter-spacing:0.5px;">DOM</div><div style="font-size:18px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">$420K</div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +2%</span></div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$7.5K</span></div></td><td style="text-align:center;padding:0 3px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:3px;letter-spacing:0.5px;">MEX</div><div style="font-size:18px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">$235K</div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +6%</span></div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$12.9K</span></div></td><td style="text-align:center;padding:0 3px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:3px;letter-spacing:0.5px;">CRI</div><div style="font-size:18px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">$74K</div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +2%</span></div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$1.4K</span></div></td><td style="text-align:center;padding:0 3px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:3px;letter-spacing:0.5px;">OTHERS</div><div style="font-size:18px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">$151K</div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +2%</span></div><div style="font-size:10px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$3.5K</span></div></td></tr></table>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr>
+    <td style="padding-right:14px;"><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#CBD5E0;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2025</td>
+    </tr></table></td>
+    <td><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#00c389;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2026</td>
+    </tr></table></td>
+  </tr></table>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjAwIDE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0id2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrOyI+PHRleHQgeD0iMzIiIHk9IjEzMy4wIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wPC90ZXh0PjxsaW5lIHgxPSIzOCIgeTE9IjEzMC4wIiB4Mj0iNTkwIiB5Mj0iMTMwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9IjEwOS4wIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wLjZNPC90ZXh0PjxsaW5lIHgxPSIzOCIgeTE9IjEwNi4wIiB4Mj0iNTkwIiB5Mj0iMTA2LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEuMk08L3RleHQ+PGxpbmUgeDE9IjM4IiB5MT0iODIuMCIgeDI9IjU5MCIgeTI9IjgyLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9IjYxLjAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEuOE08L3RleHQ+PGxpbmUgeDE9IjM4IiB5MT0iNTguMCIgeDI9IjU5MCIgeTI9IjU4LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9IjM3LjAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjIuNE08L3RleHQ+PGxpbmUgeDE9IjM4IiB5MT0iMzQuMCIgeDI9IjU5MCIgeTI9IjM0LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9IjEzLjAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjMuME08L3RleHQ+PGxpbmUgeDE9IjM4IiB5MT0iMTAuMCIgeDI9IjU5MCIgeTI9IjEwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBvbHlsaW5lIHBvaW50cz0iODkuMSw3NS40IDEzOC4yLDcxLjMgMTg3LjMsNjYuNiAyMzYuNCw2OS4xIDI4NS41LDY2LjYgMzM0LjUsNjguNiAzODMuNiw2NC44IDQzMi43LDYzLjUgNDgxLjgsNTguOSA1MzAuOSw1Mi43IDU4MC4wLDU1LjciIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0NCRDVFMCIgc3Ryb2tlLXdpZHRoPSIyLjAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPjxwb2x5bGluZSBwb2ludHM9IjQwLjAsNTUuMSA4OS4xLDU0LjggMTM4LjIsNDkuOCAxODcuMyw1MC44IDIzNi40LDQ4LjcgMjg1LjUsNDYuNiAzMzQuNSw0NS41IDM4My42LDM3LjUgNDMyLjcsMzUuMCA0ODEuOCwzOC4zIDUzMC45LDMzLjAgNTgwLjAsMzMuMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBjMzg5IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNTgwLjAiIGN5PSIzMy4yIiByPSIzLjUiIGZpbGw9IiMwMGMzODkiLz48dGV4dCB4PSI1NzQuMCIgeT0iMjUuMjAwMDAwMDAwMDAwMDAzIiBmb250LXNpemU9IjExIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMDBjMzg5IiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+JDIuNDJNPC90ZXh0Pjx0ZXh0IHg9IjQwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+RW5lPC90ZXh0Pjx0ZXh0IHg9Ijg5LjEiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+RmViPC90ZXh0Pjx0ZXh0IHg9IjEzOC4yIiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPk1hcjwvdGV4dD48dGV4dCB4PSIxODcuMyIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BYnI8L3RleHQ+PHRleHQgeD0iMjM2LjQiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+TWF5PC90ZXh0Pjx0ZXh0IHg9IjI4NS41IiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkp1bjwvdGV4dD48dGV4dCB4PSIzMzQuNSIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdWw8L3RleHQ+PHRleHQgeD0iMzgzLjYiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+QWdvPC90ZXh0Pjx0ZXh0IHg9IjQzMi43IiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPlNlcDwvdGV4dD48dGV4dCB4PSI0ODEuOCIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5PY3Q8L3RleHQ+PHRleHQgeD0iNTMwLjkiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+Tm92PC90ZXh0Pjx0ZXh0IHg9IjU4MC4wIiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkRpYzwvdGV4dD48L3N2Zz4=" width="100%" style="display:block;width:100%;" alt="RECAUDO USD GLO">
+</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:14px;"><tr>
+  <td width="49%" valign="top" style="padding-right:6px;"><div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;padding:18px 20px 14px;">
+  <div style="font-size:13px;font-weight:700;color:#1A1D23;margin-bottom:2px;">RECAUDO USD <span style="color:#2563EB;font-weight:700;">Core</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:14px;">LM = Last Month &nbsp;·&nbsp; TG = Target</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;"><tr><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">COL</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$918K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -3%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#E53E3E;">▼ $32.5K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">DOM</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$226K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -4%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#E53E3E;">▼ $10.5K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">MEX</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$144K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +9%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$11.9K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">CRI</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$42K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +12%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$4.4K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">OTHERS</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$90K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +7%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$5.7K</span></div></td></tr></table>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr>
+    <td style="padding-right:14px;"><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#CBD5E0;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2025</td>
+    </tr></table></td>
+    <td><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#2563EB;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2026</td>
+    </tr></table></td>
+  </tr></table>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAwIDE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0id2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrOyI+PHRleHQgeD0iMjIiIHk9IjEzMy4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjEzMC4wIiB4Mj0iMjgwIiB5Mj0iMTMwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjEwOS4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wLjRNPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjEwNi4wIiB4Mj0iMjgwIiB5Mj0iMTA2LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjAuOE08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iODIuMCIgeDI9IjI4MCIgeTI9IjgyLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjYxLjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEuMk08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iNTguMCIgeDI9IjI4MCIgeTI9IjU4LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjM3LjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEuNk08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMzQuMCIgeDI9IjI4MCIgeTI9IjM0LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjEzLjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjIuME08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMTAuMCIgeDI9IjI4MCIgeTI9IjEwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBvbHlsaW5lIHBvaW50cz0iNTEuOCw4NC4xIDczLjYsODAuNiA5NS41LDc3LjggMTE3LjMsNzkuOSAxMzkuMSw3Ny45IDE2MC45LDc5LjUgMTgyLjcsNzUuOCAyMDQuNSw3NC40IDIyNi40LDcwLjkgMjQ4LjIsNjYuMSAyNzAuMCw2Ny4yIiBmaWxsPSJub25lIiBzdHJva2U9IiNDQkQ1RTAiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cG9seWxpbmUgcG9pbnRzPSIzMC4wLDY2LjggNTEuOCw2Ny4yIDczLjYsNjEuNyA5NS41LDYyLjUgMTE3LjMsNjAuNCAxMzkuMSw1OC4yIDE2MC45LDU2LjYgMTgyLjcsNDcuNyAyMDQuNSw0NC45IDIyNi40LDQ4LjggMjQ4LjIsNDMuNiAyNzAuMCw0NC44IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTYzRUIiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIyNzAuMCIgY3k9IjQ0LjgiIHI9IjMuNSIgZmlsbD0iIzI1NjNFQiIvPjx0ZXh0IHg9IjI2NC4wIiB5PSIzNi44IiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjMjU2M0VCIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+JDEuNDJNPC90ZXh0Pjx0ZXh0IHg9IjMwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5FbmU8L3RleHQ+PHRleHQgeD0iNTEuOCIgeT0iMTUwIiBmb250LXNpemU9IjcuNSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkZlYjwvdGV4dD48dGV4dCB4PSI3My42IiB5PSIxNTAiIGZvbnQtc2l6ZT0iNy41IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+TWFyPC90ZXh0Pjx0ZXh0IHg9Ijk1LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BYnI8L3RleHQ+PHRleHQgeD0iMTE3LjMiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5NYXk8L3RleHQ+PHRleHQgeD0iMTM5LjEiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdW48L3RleHQ+PHRleHQgeD0iMTYwLjkiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdWw8L3RleHQ+PHRleHQgeD0iMTgyLjciIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BZ288L3RleHQ+PHRleHQgeD0iMjA0LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5TZXA8L3RleHQ+PHRleHQgeD0iMjI2LjQiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5PY3Q8L3RleHQ+PHRleHQgeD0iMjQ4LjIiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5Ob3Y8L3RleHQ+PHRleHQgeD0iMjcwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5EaWM8L3RleHQ+PC9zdmc+" width="100%" style="display:block;width:100%;" alt="RECAUDO USD Core">
+</div></td>
+  <td width="49%" valign="top" style="padding-left:6px;"><div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;padding:18px 20px 14px;">
+  <div style="font-size:13px;font-weight:700;color:#1A1D23;margin-bottom:2px;">RECAUDO USD <span style="color:#7C3AED;font-weight:700;">Lite</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:14px;">LM = Last Month &nbsp;·&nbsp; TG = Target</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;"><tr><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">COL</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$623K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▼ 0%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$2.6K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">DOM</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$194K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +10%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$17.9K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">MEX</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$91K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +1%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#38A169;">▲ +$995</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">CRI</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$32K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -9%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#E53E3E;">▼ $3.0K</span></div></td><td style="text-align:center;padding:0 2px;"><div style="font-size:10px;font-weight:700;color:#718096;margin-bottom:3px;">OTHERS</div><div style="font-size:15px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:3px;">$61K</div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -4%</span></div><div style="font-size:9.5px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">Δ: </span><span style="color:#E53E3E;">▼ $2.3K</span></div></td></tr></table>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr>
+    <td style="padding-right:14px;"><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#CBD5E0;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2025</td>
+    </tr></table></td>
+    <td><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#7C3AED;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2026</td>
+    </tr></table></td>
+  </tr></table>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAwIDE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0id2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrOyI+PHRleHQgeD0iMjIiIHk9IjEzMy4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjEzMC4wIiB4Mj0iMjgwIiB5Mj0iMTMwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjEwOS4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wLjRNPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjEwNi4wIiB4Mj0iMjgwIiB5Mj0iMTA2LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjAuOE08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iODIuMCIgeDI9IjI4MCIgeTI9IjgyLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjYxLjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEuMk08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iNTguMCIgeDI9IjI4MCIgeTI9IjU4LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjM3LjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEuNk08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMzQuMCIgeDI9IjI4MCIgeTI9IjM0LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjEzLjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjIuME08L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMTAuMCIgeDI9IjI4MCIgeTI9IjEwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBvbHlsaW5lIHBvaW50cz0iNTEuOCw5NC4wIDczLjYsOTEuMyA5NS41LDg3LjIgMTE3LjMsODguOCAxMzkuMSw4Ny4wIDE2MC45LDg4LjQgMTgyLjcsODYuNCAyMDQuNSw4NS44IDIyNi40LDgyLjYgMjQ4LjIsNzguMCAyNzAuMCw4MS4zIiBmaWxsPSJub25lIiBzdHJva2U9IiNDQkQ1RTAiIHN0cm9rZS13aWR0aD0iMS44IiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cG9seWxpbmUgcG9pbnRzPSIzMC4wLDgwLjkgNTEuOCw4MC4wIDczLjYsNzguMCA5NS41LDc4LjYgMTE3LjMsNzcuNSAxMzkuMSw3Ni43IDE2MC45LDc2LjYgMTgyLjcsNzMuNiAyMDQuNSw3Mi42IDIyNi40LDczLjcgMjQ4LjIsNzEuMCAyNzAuMCw3MC4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM3QzNBRUQiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSIyNzAuMCIgY3k9IjcwLjAiIHI9IjMuNSIgZmlsbD0iIzdDM0FFRCIvPjx0ZXh0IHg9IjI2NC4wIiB5PSI2Mi4wIiBmb250LXNpemU9IjEwIiBmb250LXdlaWdodD0iNzAwIiBmaWxsPSIjN0MzQUVEIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+JDEuMDBNPC90ZXh0Pjx0ZXh0IHg9IjMwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5FbmU8L3RleHQ+PHRleHQgeD0iNTEuOCIgeT0iMTUwIiBmb250LXNpemU9IjcuNSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkZlYjwvdGV4dD48dGV4dCB4PSI3My42IiB5PSIxNTAiIGZvbnQtc2l6ZT0iNy41IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+TWFyPC90ZXh0Pjx0ZXh0IHg9Ijk1LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BYnI8L3RleHQ+PHRleHQgeD0iMTE3LjMiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5NYXk8L3RleHQ+PHRleHQgeD0iMTM5LjEiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdW48L3RleHQ+PHRleHQgeD0iMTYwLjkiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdWw8L3RleHQ+PHRleHQgeD0iMTgyLjciIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BZ288L3RleHQ+PHRleHQgeD0iMjA0LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5TZXA8L3RleHQ+PHRleHQgeD0iMjI2LjQiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5PY3Q8L3RleHQ+PHRleHQgeD0iMjQ4LjIiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5Ob3Y8L3RleHQ+PHRleHQgeD0iMjcwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5EaWM8L3RleHQ+PC9zdmc+" width="100%" style="display:block;width:100%;" alt="RECAUDO USD Lite">
+</div></td>
+</tr></table>
 
-    /* ─── METRIC CARD ─── */
-    .card { border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; margin-bottom: 16px; background: #fff; }
-    .card-header { padding: 12px 16px 8px; border-bottom: 1px solid #eef0f3; }
-    .card-title { font-size: 12px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; color: #0D1B2A; }
-    .card-title .glo  { color: #E8731A; }
-    .card-title .core { color: #2d7a4f; }
-    .card-title .lite { color: #1e5fa8; }
-    .card-sub { font-size: 10px; color: #aaa; margin-top: 2px; }
-    .kpi-cols { display: flex; border-bottom: 1px solid #f0f2f5; }
-    .kpi-col { flex: 1; padding: 12px 8px; text-align: center; border-right: 1px solid #f0f2f5; }
-    .kpi-col:last-child { border-right: none; }
-    .ver-name  { font-size: 11px; font-weight: 700; color: #666; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
-    .ver-val   { font-size: 16px; font-weight: 800; color: #0D1B2A; line-height: 1.1; }
-    .ver-val.sm { font-size: 13px; }
-    .ver-lm    { font-size: 10px; margin-top: 4px; }
-    .ver-delta { font-size: 10px; margin-top: 1px; }
-    .pos { color: #00897B; font-weight: 700; }
-    .neg { color: #D50000; font-weight: 700; }
-    .neu { color: #888; }
-    .chart-area { padding: 12px 16px 8px; }
-    .legend-row { display: flex; gap: 14px; margin-bottom: 6px; font-size: 10px; color: #888; align-items: center; }
-    .legend-dot { display: inline-block; width: 10px; height: 3px; border-radius: 2px; margin-right: 4px; vertical-align: middle; }
-    .legend-dash { display: inline-block; width: 10px; height: 2px; border-radius: 1px; margin-right: 4px; vertical-align: middle; background-repeating-linear-gradient(to right, #bbb 0, #bbb 4px, transparent 4px, transparent 6px); }
+  <hr style="border:none;border-top:1px solid #EEF1F7;margin:28px 0;">
 
-    /* ─── TWO-COL ─── */
-    .two-col { display: flex; gap: 12px; margin-bottom: 0; }
-    .two-col > * { flex: 1; min-width: 0; }
+  <!-- 2. NSM -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #EEF1F7;"><tr>
+  <td width="48" valign="middle"><div style="width:36px;height:36px;border-radius:10px;background:#FFF3E0;text-align:center;line-height:36px;font-size:17px;">📊</div></td>
+  <td valign="middle" style="padding-left:12px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8A94A6;margin-bottom:2px;">2 · What</div>
+    <div style="font-size:16px;font-weight:700;color:#1B2A4A;">Eficiencia Transaccional (NSM)</div>
+  </td>
+</tr></table>
+  <div style="background:#F7F9FC;border:1px solid #E8ECF2;border-radius:12px;padding:20px 24px;margin-bottom:16px;">
+  <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#8A94A6;margin-bottom:6px;">Métrica Principal · EFICIENCIA TRANSACCIONAL (NSM)</div>
+  <div style="font-size:13px;color:#4A5568;line-height:1.7;margin-bottom:10px;">Porcentaje de transacciones recaudadas de las proyectadas para cobro en el mes.</div>
+  <div style="display:inline-block;background:#EEF1F7;border-left:3px solid #3B6ED4;padding:8px 14px;border-radius:0 8px 8px 0;font-size:12px;color:#2D4A8A;font-style:italic;margin-bottom:10px;">Transacciones exitosas de usuarios proyectados / Transacciones proyectadas a cobrar en el mes × 100</div>
+  <div style="font-size:12.5px;color:#4A5568;">🎯 <strong style="color:#1B2A4A;">Target:</strong> ≥ 90% para todos los países y segmentos</div>
+</div>
+  <div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;margin-bottom:14px;padding:18px 20px 14px;">
+  <div style="font-size:15px;font-weight:700;color:#1A1D23;margin-bottom:2px;">EFICIENCIA TRANSACCIONAL <span style="color:#F97316;font-weight:700;">GLO</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:16px;">LM = Last Month &nbsp;·&nbsp; TG = Target</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:14px;"><tr><td width="25%" style="text-align:center;padding:0 4px;"><div style="font-size:13px;font-weight:700;color:#718096;margin-bottom:4px;letter-spacing:0.5px;">COL</div><div style="font-size:22px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:5px;">91.7%</div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -1%</span></div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +1.70</span></div></td><td width="25%" style="text-align:center;padding:0 4px;"><div style="font-size:13px;font-weight:700;color:#718096;margin-bottom:4px;letter-spacing:0.5px;">DOM</div><div style="font-size:22px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:5px;">94.4%</div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -1%</span></div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +4.42</span></div></td><td width="25%" style="text-align:center;padding:0 4px;"><div style="font-size:13px;font-weight:700;color:#718096;margin-bottom:4px;letter-spacing:0.5px;">MEX</div><div style="font-size:22px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:5px;">95.8%</div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▼ 0%</span></div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +5.78</span></div></td><td width="25%" style="text-align:center;padding:0 4px;"><div style="font-size:13px;font-weight:700;color:#718096;margin-bottom:4px;letter-spacing:0.5px;">CRI</div><div style="font-size:22px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:5px;">95.1%</div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +1%</span></div><div style="font-size:11px;font-weight:500;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +5.07</span></div></td></tr></table>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr>
+    <td style="padding-right:14px;"><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#CBD5E0;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2025</td>
+    </tr></table></td>
+    <td><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#F97316;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2026</td>
+    </tr></table></td>
+  </tr></table>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjAwIDE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0id2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrOyI+PHRleHQgeD0iMzIiIHk9IjEzMy4wIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wJTwvdGV4dD48bGluZSB4MT0iMzgiIHkxPSIxMzAuMCIgeDI9IjU5MCIgeTI9IjEzMC4wIiBzdHJva2U9IiNFRUYxRjciIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjMyIiB5PSIxMDkuMCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+MjAlPC90ZXh0PjxsaW5lIHgxPSIzOCIgeTE9IjEwNi4wIiB4Mj0iNTkwIiB5Mj0iMTA2LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjQwJTwvdGV4dD48bGluZSB4MT0iMzgiIHkxPSI4Mi4wIiB4Mj0iNTkwIiB5Mj0iODIuMCIgc3Ryb2tlPSIjRUVGMUY3IiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB4PSIzMiIgeT0iNjEuMCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+NjAlPC90ZXh0PjxsaW5lIHgxPSIzOCIgeTE9IjU4LjAiIHgyPSI1OTAiIHkyPSI1OC4wIiBzdHJva2U9IiNFRUYxRjciIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjMyIiB5PSIzNy4wIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj44MCU8L3RleHQ+PGxpbmUgeDE9IjM4IiB5MT0iMzQuMCIgeDI9IjU5MCIgeTI9IjM0LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMzIiIHk9IjEzLjAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEwMCU8L3RleHQ+PGxpbmUgeDE9IjM4IiB5MT0iMTAuMCIgeDI9IjU5MCIgeTI9IjEwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBvbHlsaW5lIHBvaW50cz0iNDAuMCwxOC41IDg5LjEsMjAuMSAxMzguMiwxNy4zIDE4Ny4zLDE5LjYgMjM2LjQsMTguNiAyODUuNSwxOS4yIDMzNC41LDE2LjggMzgzLjYsMTguOCA0MzIuNywxNy44IDQ4MS44LDE3LjMgNTMwLjksMjAuNSA1ODAuMCwxNi42IiBmaWxsPSJub25lIiBzdHJva2U9IiNDQkQ1RTAiIHN0cm9rZS13aWR0aD0iMi4wIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48cG9seWxpbmUgcG9pbnRzPSI0MC4wLDIwLjIgODkuMSwyMi45IDEzOC4yLDE3LjQgMTg3LjMsMTguOSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRjk3MzE2IiBzdHJva2Utd2lkdGg9IjIuNSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iMTg3LjMiIGN5PSIxOC45IiByPSIzLjUiIGZpbGw9IiNGOTczMTYiLz48dGV4dCB4PSIxOTMuMyIgeT0iMzQuOSIgZm9udC1zaXplPSIxMSIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI0Y5NzMxNiIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+OTIuNiU8L3RleHQ+PHRleHQgeD0iNDAuMCIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5FbmU8L3RleHQ+PHRleHQgeD0iODkuMSIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5GZWI8L3RleHQ+PHRleHQgeD0iMTM4LjIiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+TWFyPC90ZXh0Pjx0ZXh0IHg9IjE4Ny4zIiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkFicjwvdGV4dD48dGV4dCB4PSIyMzYuNCIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5NYXk8L3RleHQ+PHRleHQgeD0iMjg1LjUiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjRDBEOEU0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+SnVuPC90ZXh0Pjx0ZXh0IHg9IjMzNC41IiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0QwRDhFNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkp1bDwvdGV4dD48dGV4dCB4PSIzODMuNiIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BZ288L3RleHQ+PHRleHQgeD0iNDMyLjciIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjRDBEOEU0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+U2VwPC90ZXh0Pjx0ZXh0IHg9IjQ4MS44IiB5PSIxNTAiIGZvbnQtc2l6ZT0iOSIgZmlsbD0iI0QwRDhFNCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPk9jdDwvdGV4dD48dGV4dCB4PSI1MzAuOSIgeT0iMTUwIiBmb250LXNpemU9IjkiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5Ob3Y8L3RleHQ+PHRleHQgeD0iNTgwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI5IiBmaWxsPSIjRDBEOEU0IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+RGljPC90ZXh0Pjwvc3ZnPg==" width="100%" style="display:block;width:100%;" alt="EFICIENCIA TRANSACCIONAL GLO">
+</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:14px;"><tr>
+  <td width="49%" valign="top" style="padding-right:6px;"><div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;padding:18px 20px 14px;">
+  <div style="font-size:13px;font-weight:700;color:#1A1D23;margin-bottom:2px;">EFICIENCIA TRANSACCIONAL <span style="color:#2563EB;font-weight:700;">Core</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:14px;">LM = Last Month &nbsp;·&nbsp; TG = Target</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;"><tr><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">COL</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">94.6%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -1%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +4.58</span></div></td><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">DOM</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">96.4%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -1%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +6.43</span></div></td><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">MEX</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">98.6%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▼ 0%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +8.62</span></div></td><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">CRI</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">96.5%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▲ +3%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +6.45</span></div></td></tr></table>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr>
+    <td style="padding-right:14px;"><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#CBD5E0;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2025</td>
+    </tr></table></td>
+    <td><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#2563EB;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2026</td>
+    </tr></table></td>
+  </tr></table>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAwIDE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0id2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrOyI+PHRleHQgeD0iMjIiIHk9IjEzMy4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wJTwvdGV4dD48bGluZSB4MT0iMjgiIHkxPSIxMzAuMCIgeDI9IjI4MCIgeTI9IjEzMC4wIiBzdHJva2U9IiNFRUYxRjciIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjIyIiB5PSIxMDkuMCIgZm9udC1zaXplPSI4IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+MjAlPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjEwNi4wIiB4Mj0iMjgwIiB5Mj0iMTA2LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjQwJTwvdGV4dD48bGluZSB4MT0iMjgiIHkxPSI4Mi4wIiB4Mj0iMjgwIiB5Mj0iODIuMCIgc3Ryb2tlPSIjRUVGMUY3IiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB4PSIyMiIgeT0iNjEuMCIgZm9udC1zaXplPSI4IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+NjAlPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjU4LjAiIHgyPSIyODAiIHkyPSI1OC4wIiBzdHJva2U9IiNFRUYxRjciIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjIyIiB5PSIzNy4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj44MCU8L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMzQuMCIgeDI9IjI4MCIgeTI9IjM0LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjEzLjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEwMCU8L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMTAuMCIgeDI9IjI4MCIgeTI9IjEwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBvbHlsaW5lIHBvaW50cz0iMzAuMCwxNC4zIDUxLjgsMTUuMiA3My42LDEyLjggOTUuNSwxNS4zIDExNy4zLDE0LjggMTM5LjEsMTQuNyAxNjAuOSwxMy4xIDE4Mi43LDE1LjQgMjA0LjUsMTQuMiAyMjYuNCwxMy45IDI0OC4yLDE3LjYgMjcwLjAsMTIuMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQ0JENUUwIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBvbHlsaW5lIHBvaW50cz0iMzAuMCwxNy4xIDUxLjgsMTkuMiA3My42LDE0LjIgOTUuNSwxNS42IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNTYzRUIiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI5NS41IiBjeT0iMTUuNiIgcj0iMy41IiBmaWxsPSIjMjU2M0VCIi8+PHRleHQgeD0iMTAxLjUiIHk9IjMxLjYiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiMyNTYzRUIiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjk1LjMlPC90ZXh0Pjx0ZXh0IHg9IjMwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5FbmU8L3RleHQ+PHRleHQgeD0iNTEuOCIgeT0iMTUwIiBmb250LXNpemU9IjcuNSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkZlYjwvdGV4dD48dGV4dCB4PSI3My42IiB5PSIxNTAiIGZvbnQtc2l6ZT0iNy41IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+TWFyPC90ZXh0Pjx0ZXh0IHg9Ijk1LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BYnI8L3RleHQ+PHRleHQgeD0iMTE3LjMiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5NYXk8L3RleHQ+PHRleHQgeD0iMTM5LjEiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdW48L3RleHQ+PHRleHQgeD0iMTYwLjkiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdWw8L3RleHQ+PHRleHQgeD0iMTgyLjciIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BZ288L3RleHQ+PHRleHQgeD0iMjA0LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5TZXA8L3RleHQ+PHRleHQgeD0iMjI2LjQiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5PY3Q8L3RleHQ+PHRleHQgeD0iMjQ4LjIiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5Ob3Y8L3RleHQ+PHRleHQgeD0iMjcwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5EaWM8L3RleHQ+PC9zdmc+" width="100%" style="display:block;width:100%;" alt="EFICIENCIA TRANSACCIONAL Core">
+</div></td>
+  <td width="49%" valign="top" style="padding-left:6px;"><div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;padding:18px 20px 14px;">
+  <div style="font-size:13px;font-weight:700;color:#1A1D23;margin-bottom:2px;">EFICIENCIA TRANSACCIONAL <span style="color:#7C3AED;font-weight:700;">Lite</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:14px;">LM = Last Month &nbsp;·&nbsp; TG = Target</div>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:10px;"><tr><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">COL</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">89.8%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -2%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#E53E3E;">▼ -0.15</span></div></td><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">DOM</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">93.0%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▼ 0%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +3.04</span></div></td><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">MEX</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">93.9%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#38A169;">▼ 0%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +3.86</span></div></td><td width="25%" style="text-align:center;padding:0 2px;"><div style="font-size:11px;font-weight:700;color:#718096;margin-bottom:4px;">CRI</div><div style="font-size:17px;font-weight:800;color:#1A1D23;line-height:1;margin-bottom:4px;">94.2%</div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">LM: </span><span style="color:#E53E3E;">▼ -1%</span></div><div style="font-size:10px;color:#4A5568;line-height:1.6;white-space:nowrap;"><span style="color:#A0AEC0;">TG: </span><span style="color:#38A169;">▲ +4.22</span></div></td></tr></table>
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr>
+    <td style="padding-right:14px;"><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#CBD5E0;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2025</td>
+    </tr></table></td>
+    <td><table cellpadding="0" cellspacing="0"><tr>
+      <td><div style="width:20px;height:3px;background:#7C3AED;border-radius:2px;"></div></td>
+      <td style="padding-left:5px;font-size:11px;color:#718096;">2026</td>
+    </tr></table></td>
+  </tr></table>
+  <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMzAwIDE2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBzdHlsZT0id2lkdGg6MTAwJTtkaXNwbGF5OmJsb2NrOyI+PHRleHQgeD0iMjIiIHk9IjEzMy4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj4wJTwvdGV4dD48bGluZSB4MT0iMjgiIHkxPSIxMzAuMCIgeDI9IjI4MCIgeTI9IjEzMC4wIiBzdHJva2U9IiNFRUYxRjciIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjIyIiB5PSIxMDkuMCIgZm9udC1zaXplPSI4IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+MjAlPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjEwNi4wIiB4Mj0iMjgwIiB5Mj0iMTA2LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9Ijg1LjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjQwJTwvdGV4dD48bGluZSB4MT0iMjgiIHkxPSI4Mi4wIiB4Mj0iMjgwIiB5Mj0iODIuMCIgc3Ryb2tlPSIjRUVGMUY3IiBzdHJva2Utd2lkdGg9IjEiLz48dGV4dCB4PSIyMiIgeT0iNjEuMCIgZm9udC1zaXplPSI4IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+NjAlPC90ZXh0PjxsaW5lIHgxPSIyOCIgeTE9IjU4LjAiIHgyPSIyODAiIHkyPSI1OC4wIiBzdHJva2U9IiNFRUYxRjciIHN0cm9rZS13aWR0aD0iMSIvPjx0ZXh0IHg9IjIyIiB5PSIzNy4wIiBmb250LXNpemU9IjgiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJlbmQiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj44MCU8L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMzQuMCIgeDI9IjI4MCIgeTI9IjM0LjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHRleHQgeD0iMjIiIHk9IjEzLjAiIGZvbnQtc2l6ZT0iOCIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9ImVuZCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjEwMCU8L3RleHQ+PGxpbmUgeDE9IjI4IiB5MT0iMTAuMCIgeDI9IjI4MCIgeTI9IjEwLjAiIHN0cm9rZT0iI0VFRjFGNyIgc3Ryb2tlLXdpZHRoPSIxIi8+PHBvbHlsaW5lIHBvaW50cz0iMzAuMCwyMC42IDUxLjgsMjIuNiA3My42LDE5LjYgOTUuNSwyMS44IDExNy4zLDIwLjcgMTM5LjEsMjEuNyAxNjAuOSwxOC45IDE4Mi43LDIwLjcgMjA0LjUsMTkuOSAyMjYuNCwxOS4zIDI0OC4yLDIyLjMgMjcwLjAsMTkuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQ0JENUUwIiBzdHJva2Utd2lkdGg9IjEuOCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PHBvbHlsaW5lIHBvaW50cz0iMzAuMCwyMi4xIDUxLjgsMjUuMyA3My42LDE5LjYgOTUuNSwyMS4wIiBmaWxsPSJub25lIiBzdHJva2U9IiM3QzNBRUQiIHN0cm9rZS13aWR0aD0iMi4yIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz48Y2lyY2xlIGN4PSI5NS41IiBjeT0iMjEuMCIgcj0iMy41IiBmaWxsPSIjN0MzQUVEIi8+PHRleHQgeD0iMTAxLjUiIHk9IjM3LjAiIGZvbnQtc2l6ZT0iMTAiIGZvbnQtd2VpZ2h0PSI3MDAiIGZpbGw9IiM3QzNBRUQiIHRleHQtYW5jaG9yPSJzdGFydCIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPjkwLjglPC90ZXh0Pjx0ZXh0IHg9IjMwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5FbmU8L3RleHQ+PHRleHQgeD0iNTEuOCIgeT0iMTUwIiBmb250LXNpemU9IjcuNSIgZmlsbD0iI0EwQUVDMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1mYW1pbHk9IkludGVyLEFyaWFsLHNhbnMtc2VyaWYiPkZlYjwvdGV4dD48dGV4dCB4PSI3My42IiB5PSIxNTAiIGZvbnQtc2l6ZT0iNy41IiBmaWxsPSIjQTBBRUMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIsQXJpYWwsc2Fucy1zZXJpZiI+TWFyPC90ZXh0Pjx0ZXh0IHg9Ijk1LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNBMEFFQzAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BYnI8L3RleHQ+PHRleHQgeD0iMTE3LjMiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5NYXk8L3RleHQ+PHRleHQgeD0iMTM5LjEiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdW48L3RleHQ+PHRleHQgeD0iMTYwLjkiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5KdWw8L3RleHQ+PHRleHQgeD0iMTgyLjciIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5BZ288L3RleHQ+PHRleHQgeD0iMjA0LjUiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5TZXA8L3RleHQ+PHRleHQgeD0iMjI2LjQiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5PY3Q8L3RleHQ+PHRleHQgeD0iMjQ4LjIiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5Ob3Y8L3RleHQ+PHRleHQgeD0iMjcwLjAiIHk9IjE1MCIgZm9udC1zaXplPSI3LjUiIGZpbGw9IiNEMEQ4RTQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJJbnRlcixBcmlhbCxzYW5zLXNlcmlmIj5EaWM8L3RleHQ+PC9zdmc+" width="100%" style="display:block;width:100%;" alt="EFICIENCIA TRANSACCIONAL Lite">
+</div></td>
+</tr></table>
 
-    /* ─── INSIGHT BOX ─── */
-    .insight-box { background: #f8f9fc; border-left: 3px solid #E8731A; padding: 10px 14px; margin: 4px 0 14px; font-size: 12px; color: #444; line-height: 1.7; }
-    .insight-box strong { color: #0D1B2A; }
+  <hr style="border:none;border-top:1px solid #EEF1F7;margin:28px 0;">
 
-    /* ─── FORMULA BOX ─── */
-    .formula-box { background: #f0f4f8; border: 1px dashed #aac0d8; border-radius: 6px; padding: 8px 12px; margin: 8px 16px 4px; font-size: 11px; color: #444; line-height: 1.7; }
-    .formula-box strong { color: #1e3a5f; }
-
-    /* ─── SO WHAT / NOW WHAT ─── */
-    .sw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; font-size: 13px; line-height: 1.6; color: #333; }
-    .sw-item:last-child { border-bottom: none; }
-    .nw-item { padding: 9px 0; border-bottom: 1px solid #eef0f3; }
-    .nw-item:last-child { border-bottom: none; }
-    .nw-title { font-weight: 700; color: #0D1B2A; font-size: 13px; }
-    .nw-desc  { font-size: 12px; color: #555; margin-top: 3px; line-height: 1.5; }
-
-    /* ─── BRIDGE ─── */
-    .bridge-row-charts { display: flex; gap: 12px; }
-    .bridge-card { flex: 1; border: 1px solid #dde1e7; border-radius: 8px; overflow: hidden; min-width: 0; }
-    .bridge-card-title { padding: 10px 14px 6px; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #0D1B2A; border-bottom: 1px solid #eef0f3; }
-    .bridge-chart-area { padding: 10px 8px 6px; }
-    .bridge-summary { background: #f0fafa; border-left: 3px solid #45b6c5; padding: 10px 14px; margin-top: 12px; font-size: 12px; color: #444; line-height: 1.7; }
-    .bridge-summary strong { color: #0D1B2A; }
-
-    /* ─── PROJ TABLE ─── */
-    table.pt { width: 100%; border-collapse: collapse; font-size: 11px; margin-top: 0; }
-    table.pt th { background: #1e3a5f; color: #fff; padding: 7px 8px; text-align: center; }
-    table.pt th:first-child { text-align: left; }
-    table.pt td { padding: 5px 8px; text-align: center; border-bottom: 1px solid #eef0f3; }
-    table.pt td:first-child { text-align: left; font-weight: 700; }
-    table.pt tr.sub td { color: #666; padding-left: 18px; background: #fafbfc; font-weight: 400; }
-    table.pt tr.sub td:first-child { font-weight: 400; }
-    .proj-bullets { background: #f8f9fc; border-radius: 6px; border-left: 3px solid #1e5fa8; padding: 10px 14px; margin-bottom: 14px; font-size: 12px; color: #444; line-height: 1.8; }
-    .proj-bullets ul { list-style: none; padding: 0; }
-    .proj-bullets li { padding-left: 12px; position: relative; }
-    .proj-bullets li::before { content: '•'; color: #1e5fa8; font-weight: bold; position: absolute; left: 0; }
-
-    /* ─── FOOTER ─── */
-    .footer { background: #0D1B2A; padding: 24px 32px; margin-top: 36px; font-size: 12px; color: #8ab4d4; line-height: 1.8; }
-    
-    /* ─── ESTILOS PANTALLA LOGIN ─── */
-    .login-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #0D1B2A; z-index: 9999; display: flex; flex-direction: column; justify-content: center; align-items: center; }
-    .login-box { background: #1e3a5f; padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 400px; width: 90%; }
-    .login-box input { width: 100%; padding: 12px; border: none; border-radius: 6px; margin-bottom: 15px; text-align: center; font-size: 14px; outline: none; }
-    .login-box button { width: 100%; padding: 12px; background: #E8731A; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; font-size: 14px; transition: 0.2s; }
-    .login-box button:hover { background: #d66512; }
-  </style>
-</head>
-
-<body>
-
-<div id="login-screen" class="login-overlay">
-  <div class="login-box">
-    <div style="font-size: 40px; margin-bottom: 10px;">🔒</div>
-    <h2 style="color: #fff; margin-bottom: 10px;">Acceso Restringido</h2>
-    <p style="color: #a8c4dc; font-size: 13px; margin-bottom: 25px;">Este informe es confidencial. Por favor, verifica tu identidad.</p>
-    
-    <input type="email" id="email-input" placeholder="tu.nombre@alegra.com">
-    <button onclick="validarAcceso()">Ver Reporte</button>
-    
-    <p id="error-msg" style="color: #ff6b6b; font-size: 12px; margin-top: 15px; display: none;">❌ Correo inválido. Debe terminar en @alegra.com</p>
+  <!-- 3. SO WHAT -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #EEF1F7;"><tr>
+  <td width="48" valign="middle"><div style="width:36px;height:36px;border-radius:10px;background:#FFF7EB;text-align:center;line-height:36px;font-size:17px;">🔍</div></td>
+  <td valign="middle" style="padding-left:12px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8A94A6;margin-bottom:2px;">3 · So What</div>
+    <div style="font-size:16px;font-weight:700;color:#1B2A4A;">¿Qué explica los resultados de abril?</div>
+  </td>
+</tr></table>
+  <div style="margin-bottom:8px;"><div style="display:flex;margin-bottom:14px;align-items:flex-start;">
+  <div style="font-size:18px;margin-right:12px;line-height:1.4;">💰</div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:#1B2A4A;margin-bottom:3px;">Crecimiento real (+0.76% USD)</div>
+    <div style="font-size:13px;color:#4A5568;line-height:1.75;">El recaudo bruto de marzo está inflado por errores de <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">Bancolombia</span> al cierre de febrero; al reasignar el revenue a su mes de origen, se observa crecimiento para abril.</div>
   </div>
+</div><div style="display:flex;margin-bottom:14px;align-items:flex-start;">
+  <div style="font-size:18px;margin-right:12px;line-height:1.4;">📊</div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:#1B2A4A;margin-bottom:3px;">Mensualidades vs Anualidades</div>
+    <div style="font-size:13px;color:#4A5568;line-height:1.75;">Las <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">mensualidades</span> subieron un <strong style="color:#1B2A4A;">+0.96% USD</strong>, compensando la baja prevista en <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">anualidades</span>, que responde a la estacionalidad natural de los ciclos anuales distribuidos en 2026.</div>
+  </div>
+</div><div style="display:flex;margin-bottom:14px;align-items:flex-start;">
+  <div style="font-size:18px;margin-right:12px;line-height:1.4;">🕵️</div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:#1B2A4A;margin-bottom:3px;">Eficiencia transaccional (−1.28%)</div>
+    <div style="font-size:13px;color:#4A5568;line-height:1.75;">El performance de abril fue sólido; la variación es un <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">efecto matemático</span> por el cierre de ciclos al 30/04 y no una caída en la calidad.</div>
+  </div>
+</div><div style="display:flex;margin-bottom:14px;align-items:flex-start;">
+  <div style="font-size:18px;margin-right:12px;line-height:1.4;">📈</div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:#1B2A4A;margin-bottom:3px;">Tasa de aprobación</div>
+    <div style="font-size:13px;color:#4A5568;line-height:1.75;">Logramos una mejora del <strong style="color:#1B2A4A;">+0.43%</strong> gracias a la optimización de ruteos y el ajuste de parámetros de aceptación en el orquestador junto a <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Yuno</span>, <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Convertion</span> y pasarelas.</div>
+  </div>
+</div><div style="display:flex;margin-bottom:14px;align-items:flex-start;">
+  <div style="font-size:18px;margin-right:12px;line-height:1.4;">💸</div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:#1B2A4A;margin-bottom:3px;">New adds (−$23K USD / −$2.5K MRR)</div>
+    <div style="font-size:13px;color:#4A5568;line-height:1.75;">En MRR, la baja se concentra en <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">New logos anuales</span> (−$1.5K) y <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">reactivados mensuales</span> (−$2.4K).</div>
+  </div>
+</div><div style="display:flex;margin-bottom:14px;align-items:flex-start;">
+  <div style="font-size:18px;margin-right:12px;line-height:1.4;">🧟</div>
+  <div>
+    <div style="font-size:13px;font-weight:700;color:#1B2A4A;margin-bottom:3px;">Proyección churn</div>
+    <div style="font-size:13px;color:#4A5568;line-height:1.75;">Se proyecta en <strong style="color:#1B2A4A;">4.23%</strong> (<span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">+0.2pp vs Marzo</span>). El incremento es moderado y controlado, con foco actual en mejorar los retiros proyectados mediante la gestión coordinada de ciclos.</div>
+  </div>
+</div></div>
+
+  <hr style="border:none;border-top:1px solid #EEF1F7;margin:28px 0;">
+
+  <!-- 4. NOW WHAT -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #EEF1F7;"><tr>
+  <td width="48" valign="middle"><div style="width:36px;height:36px;border-radius:10px;background:#EBFAF3;text-align:center;line-height:36px;font-size:17px;">🚀</div></td>
+  <td valign="middle" style="padding-left:12px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8A94A6;margin-bottom:2px;">4 · Now What</div>
+    <div style="font-size:16px;font-weight:700;color:#1B2A4A;">Plan de Acción</div>
+  </td>
+</tr></table>
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:8px;"><tr><td style="font-size:13.5px;color:#4A5568;line-height:1.7;padding:8px 0 8px 0;border-bottom:1px dashed #EEF1F7;">
+  <span style="font-size:16px;margin-right:8px;">🎯</span>
+  <strong style="color:#1B2A4A;">Gestión de ciclos:</strong> Aunque la tendencia apunta a un ligero incremento del churn vs. marzo, estamos coordinando con el equipo de <strong style="color:#1B2A4A;">Retention</strong> la gestión de ciclo para mejorar el dato sobre el cierre.
+</td></tr><tr><td style="font-size:13.5px;color:#4A5568;line-height:1.7;padding:8px 0 8px 0;border-bottom:1px dashed #EEF1F7;">
+  <span style="font-size:16px;margin-right:8px;">🔄</span>
+  <strong style="color:#1B2A4A;">Estrategias Churn:</strong> Junto a <strong style="color:#1B2A4A;">Producto y Retention</strong>, implementamos la restricción PopUp día 3 en usuarios reincidentes. En paralelo, se evalúan incentivos a anualidades y estrategias de corrección en el abuso del usuario.
+</td></tr><tr><td style="font-size:13.5px;color:#4A5568;line-height:1.7;padding:8px 0 8px 0;border-bottom:1px dashed #EEF1F7;">
+  <span style="font-size:16px;margin-right:8px;">🔇</span>
+  <strong style="color:#1B2A4A;">Reembolsos:</strong> Junto a <strong style="color:#1B2A4A;">Retention y Compliance</strong>, robustecimos las políticas de reembolsos, habilitamos la <a href="https://alegra-refunds-975829886755.us-east1.run.app" style="color:#3B6ED4;">web-app</a> para centralizar su gestión e impulsamos la estrategia de notificación preventiva como soporte ante el retracto.
+</td></tr><tr><td style="font-size:13.5px;color:#4A5568;line-height:1.7;padding:8px 0 8px 0;border-bottom:1px dashed #EEF1F7;">
+  <span style="font-size:16px;margin-right:8px;">🔇</span>
+  <strong style="color:#1B2A4A;">Churn silencioso:</strong> Estaremos profundizando en el perfilamiento del <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">Delinquent</span> para desglosar los fallos en el cobro de los motivos ocultos (como deterioro en el uso o abuso del ciclo).
+</td></tr><tr><td style="font-size:13.5px;color:#4A5568;line-height:1.7;padding:8px 0 8px 0;border-bottom:1px dashed #EEF1F7;">
+  <span style="font-size:16px;margin-right:8px;">🤖</span>
+  <strong style="color:#1B2A4A;">Migración de datos:</strong> Avanzamos en la migración de datasets críticos a <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Redshift</span> y <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Metabase</span>; esta actualización reducirá los tiempos de procesamiento y ampliará nuestra capacidad de análisis.
+</td></tr><tr><td style="font-size:13.5px;color:#4A5568;line-height:1.7;padding:8px 0 8px 0;border-bottom:1px dashed #EEF1F7;">
+  <span style="font-size:16px;margin-right:8px;">🌐</span>
+  <strong style="color:#1B2A4A;">Orquestador de Pagos:</strong> <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Kushki</span> ya está integrado en el ruteo activo. <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Open Pay</span> y <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">Mercado Pago</span> se encuentran en fase final de testing para su próxima implementación, lo que mejoraría nuestra aceptación.
+</td></tr></table>
+
+  <hr style="border:none;border-top:1px solid #EEF1F7;margin:28px 0;">
+
+  <!-- 5. ANÁLISIS ADICIONALES -->
+  <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid #EEF1F7;"><tr>
+  <td width="48" valign="middle"><div style="width:36px;height:36px;border-radius:10px;background:#F3E8FF;text-align:center;line-height:36px;font-size:17px;">📈</div></td>
+  <td valign="middle" style="padding-left:12px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:1.8px;text-transform:uppercase;color:#8A94A6;margin-bottom:2px;">5 · Análisis Adicionales</div>
+    <div style="font-size:16px;font-weight:700;color:#1B2A4A;">Revenue Bridge & Proyección</div>
+  </td>
+</tr></table>
+
+  <div style="background:#F7F9FC;border-left:3px solid #00c389;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:14px;font-size:13px;color:#4A5568;line-height:1.75;"><strong style="color:#1B2A4A;">Revenue Bridge:</strong> Abril tuvo impulso por recurrencias y TRM que sopesaron la baja proyectada en anualidades, así como también al menor recaudo por new adds y en la recuperación de ciclos de la cohorte anterior (Marzo tuvo menos ciclos pendientes al cierre vs febrero).</div>
+  <div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;margin-bottom:14px;padding:18px 20px 14px;">
+  <div style="font-size:15px;font-weight:700;color:#1A1D23;margin-bottom:2px;">REVENUE BRIDGE <span style="color:#3B6ED4;font-weight:700;">GLO — Mar vs Abr 2026</span></div>
+  <div style="font-size:11px;color:#A0AEC0;margin-bottom:14px;">En miles de USD (thousands USD)</div>
+  <svg viewBox="0 0 1160 380" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;"><text x="70" y="18" font-size="12" font-weight="700" fill="#1A1D23" font-family="Inter,Arial,sans-serif">Mar — GLO Revenue Bridge</text><text x="70" y="32" font-size="9" fill="#A0AEC0" font-family="Inter,Arial,sans-serif">En miles de USD</text><rect x="70" y="46" width="9" height="9" fill="#16A34A" rx="1.5"/><text x="82" y="54" font-size="9" fill="#718096" font-family="Inter,Arial,sans-serif">Positivo</text><rect x="138" y="46" width="9" height="9" fill="#DC2626" rx="1.5"/><text x="150" y="54" font-size="9" fill="#718096" font-family="Inter,Arial,sans-serif">Negativo</text><rect x="214" y="46" width="9" height="9" fill="#38BDF8" rx="1.5"/><text x="226" y="54" font-size="9" fill="#718096" font-family="Inter,Arial,sans-serif">Cierre del mes</text><line x1="70" y1="290.0" x2="552" y2="290.0" stroke="#A0AEC0" stroke-width="1.5"/><text x="64" y="293.5" font-size="9" fill="#A0AEC0" text-anchor="end" font-family="Inter,Arial,sans-serif">$1,500</text><line x1="70" y1="252.6" x2="552" y2="252.6" stroke="#EEF1F7" stroke-width="1"/><text x="64" y="256.1" font-size="9" fill="#A0AEC0" text-anchor="end" font-family="Inter,Arial,sans-serif">$1,750</text><line x1="70" y1="215.2" x2="552" y2="215.2" stroke="#EEF1F7" stroke-width="1"/><text x="64" y="218.7" font-size="9" fill="#A0AEC0" text-anchor="end" font-family="Inter,Arial,sans-serif">$2,000</text><line x1="70" y1="177.9" x2="552" y2="177.9" stroke="#EEF1F7" stroke-width="1"/><text x="64" y="181.4" font-size="9" fill="#A0AEC0" text-anchor="end" font-family="Inter,Arial,sans-serif">$2,250</text><line x1="70" y1="140.5" x2="552" y2="140.5" stroke="#EEF1F7" stroke-width="1"/><text x="64" y="144.0" font-size="9" fill="#A0AEC0" text-anchor="end" font-family="Inter,Arial,sans-serif">$2,500</text><line x1="70" y1="103.1" x2="552" y2="103.1" stroke="#EEF1F7" stroke-width="1"/><text x="64" y="106.6" font-size="9" fill="#A0AEC0" text-anchor="end" font-family="Inter,Arial,sans-serif">$2,750</text><polyline points="50,284.0 54,287.0 46,293.0 50,296.0" fill="none" stroke="#A0AEC0" stroke-width="1.5"/><rect x="78.3" y="171.8" width="17.902857142857144" height="118.19999999999999" fill="#16A34A" rx="1.5"/><text x="87.25142857142856" y="166.8" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">$2,290</text><text transform="rotate(-50,87.25142857142856,304.0)" x="87.25142857142856" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Net Revenue -1</text><rect x="112.7" y="152.5" width="17.902857142857144" height="19.30000000000001" fill="#16A34A" rx="1.5"/><text x="121.65142857142857" y="147.5" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$129</text><text transform="rotate(-50,121.65142857142857,304.0)" x="121.65142857142857" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Recovered period-1</text><rect x="147.1" y="151.5" width="17.902857142857144" height="2" fill="#94A3B8" rx="1.5"/><text x="156.05142857142857" y="146.5" font-size="9.5" font-weight="700" fill="#94A3B8" text-anchor="middle" font-family="Inter,Arial,sans-serif">$0</text><text transform="rotate(-50,156.05142857142857,304.0)" x="156.05142857142857" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Pricing expansion</text><rect x="181.5" y="120.3" width="17.902857142857144" height="32.2" fill="#16A34A" rx="1.5"/><text x="190.45142857142858" y="115.3" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$216</text><text transform="rotate(-50,190.45142857142858,304.0)" x="190.45142857142858" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">New Logos</text><rect x="216.0" y="112.6" width="17.902857142857144" height="7.700000000000003" fill="#16A34A" rx="1.5"/><text x="224.95142857142858" y="107.6" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$52</text><text transform="rotate(-50,224.95142857142858,304.0)" x="224.95142857142858" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Reactivated</text><rect x="250.4" y="108.9" width="17.902857142857144" height="3.6999999999999886" fill="#16A34A" rx="1.5"/><text x="259.3514285714286" y="103.9" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$25</text><text transform="rotate(-50,259.3514285714286,304.0)" x="259.3514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Recovered</text><rect x="284.8" y="103.2" width="17.902857142857144" height="5.700000000000003" fill="#16A34A" rx="1.5"/><text x="293.75142857142856" y="98.2" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$38</text><text transform="rotate(-50,293.75142857142856,304.0)" x="293.75142857142856" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Upgrades</text><rect x="319.3" y="93.3" width="17.902857142857144" height="9.900000000000006" fill="#16A34A" rx="1.5"/><text x="328.25142857142856" y="88.3" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$66</text><text transform="rotate(-50,328.25142857142856,304.0)" x="328.25142857142856" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Efficiencies</text><rect x="353.7" y="93.3" width="17.902857142857144" height="14.700000000000003" fill="#DC2626" rx="1.5"/><text x="362.65142857142854" y="88.3" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-98</text><text transform="rotate(-50,362.65142857142854,304.0)" x="362.65142857142854" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Churn</text><rect x="388.1" y="108.0" width="17.902857142857144" height="23.0" fill="#DC2626" rx="1.5"/><text x="397.0514285714286" y="103.0" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-153</text><text transform="rotate(-50,397.0514285714286,304.0)" x="397.0514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Downselling + Mora</text><rect x="422.5" y="131.0" width="17.902857142857144" height="16.900000000000006" fill="#DC2626" rx="1.5"/><text x="431.45142857142855" y="126.0" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-113</text><text transform="rotate(-50,431.45142857142855,304.0)" x="431.45142857142855" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Opened cycles</text><rect x="457.0" y="147.9" width="17.902857142857144" height="3.9000000000000057" fill="#DC2626" rx="1.5"/><text x="465.95142857142855" y="142.9" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-26</text><text transform="rotate(-50,465.95142857142855,304.0)" x="465.95142857142855" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">FX Rate</text><rect x="491.4" y="151.8" width="17.902857142857144" height="2" fill="#DC2626" rx="1.5"/><text x="500.3514285714285" y="146.8" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-2</text><text transform="rotate(-50,500.3514285714285,304.0)" x="500.3514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Subscription plans</text><rect x="525.8" y="152.0" width="17.902857142857144" height="138.0" fill="#38BDF8" rx="1.5"/><text x="534.7514285714285" y="147.0" font-size="9.5" font-weight="700" fill="#38BDF8" text-anchor="middle" font-family="Inter,Arial,sans-serif">$2,423</text><text transform="rotate(-50,534.7514285714285,304.0)" x="534.7514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Current Closing</text><text x="662" y="18" font-size="12" font-weight="700" fill="#1A1D23" font-family="Inter,Arial,sans-serif">Abr — GLO Revenue Bridge</text><text x="662" y="32" font-size="9" fill="#A0AEC0" font-family="Inter,Arial,sans-serif">En miles de USD</text><rect x="662" y="46" width="9" height="9" fill="#16A34A" rx="1.5"/><text x="674" y="54" font-size="9" fill="#718096" font-family="Inter,Arial,sans-serif">Positivo</text><rect x="730" y="46" width="9" height="9" fill="#DC2626" rx="1.5"/><text x="742" y="54" font-size="9" fill="#718096" font-family="Inter,Arial,sans-serif">Negativo</text><rect x="806" y="46" width="9" height="9" fill="#38BDF8" rx="1.5"/><text x="818" y="54" font-size="9" fill="#718096" font-family="Inter,Arial,sans-serif">Cierre del mes</text><line x1="662" y1="290.0" x2="1144" y2="290.0" stroke="#A0AEC0" stroke-width="1.5"/><line x1="662" y1="252.6" x2="1144" y2="252.6" stroke="#EEF1F7" stroke-width="1"/><line x1="662" y1="215.2" x2="1144" y2="215.2" stroke="#EEF1F7" stroke-width="1"/><line x1="662" y1="177.9" x2="1144" y2="177.9" stroke="#EEF1F7" stroke-width="1"/><line x1="662" y1="140.5" x2="1144" y2="140.5" stroke="#EEF1F7" stroke-width="1"/><line x1="662" y1="103.1" x2="1144" y2="103.1" stroke="#EEF1F7" stroke-width="1"/><rect x="670.3" y="152.0" width="17.902857142857144" height="138.0" fill="#16A34A" rx="1.5"/><text x="679.2514285714285" y="147.0" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">$2,423</text><text transform="rotate(-50,679.2514285714285,304.0)" x="679.2514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Net Revenue -1</text><rect x="704.7" y="140.0" width="17.902857142857144" height="12.0" fill="#16A34A" rx="1.5"/><text x="713.6514285714286" y="135.0" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$81</text><text transform="rotate(-50,713.6514285714286,304.0)" x="713.6514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Recovered period-1</text><rect x="739.1" y="139.0" width="17.902857142857144" height="2" fill="#94A3B8" rx="1.5"/><text x="748.0514285714286" y="134.0" font-size="9.5" font-weight="700" fill="#94A3B8" text-anchor="middle" font-family="Inter,Arial,sans-serif">$0</text><text transform="rotate(-50,748.0514285714286,304.0)" x="748.0514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Pricing expansion</text><rect x="773.5" y="110.2" width="17.902857142857144" height="29.799999999999997" fill="#16A34A" rx="1.5"/><text x="782.4514285714286" y="105.2" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$199</text><text transform="rotate(-50,782.4514285714286,304.0)" x="782.4514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">New Logos</text><rect x="808.0" y="102.4" width="17.902857142857144" height="7.799999999999997" fill="#16A34A" rx="1.5"/><text x="816.9514285714286" y="97.4" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$53</text><text transform="rotate(-50,816.9514285714286,304.0)" x="816.9514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Reactivated</text><rect x="842.4" y="99.3" width="17.902857142857144" height="3.1000000000000085" fill="#16A34A" rx="1.5"/><text x="851.3514285714285" y="94.3" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$20</text><text transform="rotate(-50,851.3514285714285,304.0)" x="851.3514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Recovered</text><rect x="876.8" y="93.2" width="17.902857142857144" height="6.099999999999994" fill="#16A34A" rx="1.5"/><text x="885.7514285714285" y="88.2" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$41</text><text transform="rotate(-50,885.7514285714285,304.0)" x="885.7514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Upgrades</text><rect x="911.3" y="93.2" width="17.902857142857144" height="12.599999999999994" fill="#DC2626" rx="1.5"/><text x="920.2514285714285" y="88.2" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-85</text><text transform="rotate(-50,920.2514285714285,304.0)" x="920.2514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Efficiencies</text><rect x="945.7" y="105.8" width="17.902857142857144" height="14.400000000000006" fill="#DC2626" rx="1.5"/><text x="954.6514285714286" y="100.8" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-96</text><text transform="rotate(-50,954.6514285714286,304.0)" x="954.6514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Churn</text><rect x="980.1" y="120.2" width="17.902857142857144" height="16.700000000000003" fill="#DC2626" rx="1.5"/><text x="989.0514285714286" y="115.2" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-112</text><text transform="rotate(-50,989.0514285714286,304.0)" x="989.0514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Downselling + Mora</text><rect x="1014.5" y="136.9" width="17.902857142857144" height="19.0" fill="#DC2626" rx="1.5"/><text x="1023.4514285714286" y="131.9" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-127</text><text transform="rotate(-50,1023.4514285714286,304.0)" x="1023.4514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Opened cycles</text><rect x="1049.0" y="149.2" width="17.902857142857144" height="6.700000000000017" fill="#16A34A" rx="1.5"/><text x="1057.9514285714286" y="144.2" font-size="9.5" font-weight="700" fill="#16A34A" text-anchor="middle" font-family="Inter,Arial,sans-serif">+$45</text><text transform="rotate(-50,1057.9514285714286,304.0)" x="1057.9514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">FX Rate</text><rect x="1083.4" y="149.2" width="17.902857142857144" height="3.5" fill="#DC2626" rx="1.5"/><text x="1092.3514285714286" y="144.2" font-size="9.5" font-weight="700" fill="#DC2626" text-anchor="middle" font-family="Inter,Arial,sans-serif">$-23</text><text transform="rotate(-50,1092.3514285714286,304.0)" x="1092.3514285714286" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Subscription plans</text><rect x="1117.8" y="152.7" width="17.902857142857144" height="137.3" fill="#38BDF8" rx="1.5"/><text x="1126.7514285714285" y="147.7" font-size="9.5" font-weight="700" fill="#38BDF8" text-anchor="middle" font-family="Inter,Arial,sans-serif">$2,419</text><text transform="rotate(-50,1126.7514285714285,304.0)" x="1126.7514285714285" y="304.0" font-size="9" fill="#4A5568" text-anchor="end" font-family="Inter,Arial,sans-serif">Current Closing</text></svg>
 </div>
 
-<div id="report-content" style="display: none;">
-  <div class="wrapper">
+  <hr style="border:none;border-top:1px solid #EEF1F7;margin:20px 0;">
 
-    <div class="header">
-      <div class="header-brand">
-        <div class="logo">ALEGRA</div>
-        <div class="sub">Monthly Business Review · Collection</div>
-      </div>
-      <div class="header-meta">
-        <div class="period">Marzo 2026</div>
-        <div class="date">8 de abril de 2026</div>
-      </div>
-    </div>
-    <div class="header-intro">
-      Hola equipo, compartimos los resultados de <strong style="color:#fff;">marzo 2026</strong> para el área de Collection — recaudo, eficiencia transaccional, drivers del mes y próximos pasos.
-    </div>
-
-    <div class="kpi-bar">
-      <div class="kpi-tile">
-        <div class="kpi-label">Recaudo GLO</div>
-        <div class="kpi-value">$2,420,025</div>
-        <div class="kpi-delta pos">▲ +5.6% vs Feb</div>
-      </div>
-      <div class="kpi-tile">
-        <div class="kpi-label">NSM Global</div>
-        <div class="kpi-value">93.8%</div>
-        <div class="kpi-delta pos">▲ +4.6pp vs Feb</div>
-      </div>
-      <div class="kpi-tile">
-        <div class="kpi-label">Proyección Abril</div>
-        <div class="kpi-value">$2,355,699</div>
-        <div class="kpi-delta pos">▲ +0.5% vs proyección anterior</div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="section-title">① What — Resultados Marzo 2026</div>
-
-      <div class="card">
-        <div class="card-header">
-          <div class="card-title">RECAUDO <span class="glo">GLO</span></div>
-          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
-        </div>
-        <div class="kpi-cols">
-          <div class="kpi-col">
-            <div class="ver-name">COL</div>
-            <div class="ver-val">$1,565,751</div>
-            <div class="ver-lm pos">LM: ▲ +4.6%</div>
-            <div class="ver-delta pos">Δ: ▲ +$69,027</div>
-          </div>
-          <div class="kpi-col">
-            <div class="ver-name">DOM</div>
-            <div class="ver-val">$411,608</div>
-            <div class="ver-lm pos">LM: ▲ +11.8%</div>
-            <div class="ver-delta pos">Δ: ▲ +$43,408</div>
-          </div>
-          <div class="kpi-col">
-            <div class="ver-name">MEX</div>
-            <div class="ver-val">$222,792</div>
-            <div class="ver-lm pos">LM: ▲ +3.5%</div>
-            <div class="ver-delta pos">Δ: ▲ +$7,477</div>
-          </div>
-          <div class="kpi-col">
-            <div class="ver-name">CRI</div>
-            <div class="ver-val">$71,933</div>
-            <div class="ver-lm pos">LM: ▲ +11.8%</div>
-            <div class="ver-delta pos">Δ: ▲ +$7,600</div>
-          </div>
-        </div>
-        <div class="chart-area">
-          <div class="legend-row">
-            <span><span class="legend-dash"></span>2025</span>
-            <span><span class="legend-dot" style="background:#E8731A;"></span>2026</span>
-          </div>
-          <canvas id="recGLO" height="100"></canvas>
-        </div>
-      </div>
-      <div class="insight-box">
-        <strong>$2,420K USD (+5.65% vs Febrero).</strong> Este mes recaudamos $2,420K USD a través de 54.6K transacciones. Comparado con el mes anterior es un +50K (5.65%) en USD y un aumento del <strong>+25.26% vs el año anterior</strong>. Marzo tuvo buen performance per se; y también se ve impulsado por crecimiento de new adds, facturas pendientes de febrero y upgrades.
-      </div>
-
-      <div class="two-col">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">RECAUDO <span class="core">CORE</span></div>
-            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
-          </div>
-          <div class="kpi-cols">
-            <div class="kpi-col">
-              <div class="ver-name">COL</div>
-              <div class="ver-val sm">$920,775</div>
-              <div class="ver-lm pos">LM: ▲ +3.8%</div>
-              <div class="ver-delta pos">Δ: +$33,984</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">DOM</div>
-              <div class="ver-val sm">$230,956</div>
-              <div class="ver-lm pos">LM: ▲ +11.4%</div>
-              <div class="ver-delta pos">Δ: +$23,561</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">MEX</div>
-              <div class="ver-val sm">$125,066</div>
-              <div class="ver-lm pos">LM: ▲ +1.1%</div>
-              <div class="ver-delta pos">Δ: +$1,355</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">CRI</div>
-              <div class="ver-val sm">$36,861</div>
-              <div class="ver-lm pos">LM: ▲ +7.2%</div>
-              <div class="ver-delta pos">Δ: +$2,481</div>
-            </div>
-          </div>
-          <div class="chart-area">
-            <div class="legend-row">
-              <span><span class="legend-dash"></span>2025</span>
-              <span><span class="legend-dot" style="background:#2d7a4f;"></span>2026</span>
-            </div>
-            <canvas id="recCORE" height="80"></canvas>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">RECAUDO <span class="lite">LITE</span></div>
-            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; Δ = Last Month Delta &nbsp;·&nbsp; <em>Sin Alanube</em></div>
-          </div>
-          <div class="kpi-cols">
-            <div class="kpi-col">
-              <div class="ver-name">COL</div>
-              <div class="ver-val sm">$644,976</div>
-              <div class="ver-lm pos">LM: ▲ +5.7%</div>
-              <div class="ver-delta pos">Δ: +$35,043</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">DOM</div>
-              <div class="ver-val sm">$180,652</div>
-              <div class="ver-lm pos">LM: ▲ +12.3%</div>
-              <div class="ver-delta pos">Δ: +$19,847</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">MEX</div>
-              <div class="ver-val sm">$97,726</div>
-              <div class="ver-lm pos">LM: ▲ +6.7%</div>
-              <div class="ver-delta pos">Δ: +$6,122</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">CRI</div>
-              <div class="ver-val sm">$35,072</div>
-              <div class="ver-lm pos">LM: ▲ +17.1%</div>
-              <div class="ver-delta pos">Δ: +$5,119</div>
-            </div>
-          </div>
-          <div class="chart-area">
-            <div class="legend-row">
-              <span><span class="legend-dash"></span>2025</span>
-              <span><span class="legend-dot" style="background:#1e5fa8;"></span>2026</span>
-            </div>
-            <canvas id="recLITE" height="80"></canvas>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:8px;">
-        <div class="card-header">
-          <div class="card-title">EFICIENCIA TRANSACCIONAL (NSM) <span class="glo">GLO</span></div>
-          <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
-        </div>
-        <div class="formula-box">
-          <strong>Fórmula:</strong> Eficiencia transaccional = Transacciones exitosas de los usuarios proyectados / Transacciones proyectadas a cobrar para el mes<br>
-          <strong>Ejemplo:</strong> Si de 10 usuarios proyectados le cobramos a 9 y 1 fue retirado, la eficiencia sería del 90%.
-        </div>
-        <div class="kpi-cols">
-          <div class="kpi-col">
-            <div class="ver-name">COL</div>
-            <div class="ver-val">93.2%</div>
-            <div class="ver-lm pos">LM: ▲ +5.2pp</div>
-            <div class="ver-delta pos">TG: ▲ +3.2pp</div>
-          </div>
-          <div class="kpi-col">
-            <div class="ver-name">DOM</div>
-            <div class="ver-val">95.0%</div>
-            <div class="ver-lm pos">LM: ▲ +3.4pp</div>
-            <div class="ver-delta pos">TG: ▲ +5.0pp</div>
-          </div>
-          <div class="kpi-col">
-            <div class="ver-name">MEX</div>
-            <div class="ver-val">96.1%</div>
-            <div class="ver-lm pos">LM: ▲ +2.1pp</div>
-            <div class="ver-delta pos">TG: ▲ +6.1pp</div>
-          </div>
-          <div class="kpi-col">
-            <div class="ver-name">CRI</div>
-            <div class="ver-val">94.4%</div>
-            <div class="ver-lm pos">LM: ▲ +3.4pp</div>
-            <div class="ver-delta pos">TG: ▲ +4.4pp</div>
-          </div>
-        </div>
-        <div class="chart-area">
-          <div class="legend-row">
-            <span><span class="legend-dash"></span>2025</span>
-            <span><span class="legend-dot" style="background:#E8731A;"></span>2026</span>
-            <span><span class="legend-dot" style="background:#ccc;"></span>Target 90%</span>
-          </div>
-          <canvas id="nsmGLO" height="100"></canvas>
-        </div>
-      </div>
-
-      <div class="two-col">
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">NSM <span class="core">CORE</span></div>
-            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
-          </div>
-          <div class="kpi-cols">
-            <div class="kpi-col">
-              <div class="ver-name">COL</div>
-              <div class="ver-val sm">96.0%</div>
-              <div class="ver-lm pos">LM: ▲ +4.9pp</div>
-              <div class="ver-delta pos">TG: ▲ +6.0pp</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">DOM</div>
-              <div class="ver-val sm">97.7%</div>
-              <div class="ver-lm pos">LM: ▲ +3.6pp</div>
-              <div class="ver-delta pos">TG: ▲ +7.7pp</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">MEX</div>
-              <div class="ver-val sm">99.0%</div>
-              <div class="ver-lm pos">LM: ▲ +2.9pp</div>
-              <div class="ver-delta pos">TG: ▲ +9.0pp</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">CRI</div>
-              <div class="ver-val sm">93.9%</div>
-              <div class="ver-lm neg">LM: ▼ −1.1pp</div>
-              <div class="ver-delta pos">TG: ▲ +3.9pp</div>
-            </div>
-          </div>
-          <div class="chart-area">
-            <div class="legend-row">
-              <span><span class="legend-dash"></span>2025</span>
-              <span><span class="legend-dot" style="background:#2d7a4f;"></span>2026</span>
-            </div>
-            <canvas id="nsmCORE" height="80"></canvas>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header">
-            <div class="card-title">NSM <span class="lite">LITE</span></div>
-            <div class="card-sub">LM = Last Month &nbsp;·&nbsp; TG = Target (90%)</div>
-          </div>
-          <div class="kpi-cols">
-            <div class="kpi-col">
-              <div class="ver-name">COL</div>
-              <div class="ver-val sm">91.4%</div>
-              <div class="ver-lm pos">LM: ▲ +5.3pp</div>
-              <div class="ver-delta pos">TG: ▲ +1.4pp</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">DOM</div>
-              <div class="ver-val sm">93.2%</div>
-              <div class="ver-lm pos">LM: ▲ +3.3pp</div>
-              <div class="ver-delta pos">TG: ▲ +3.2pp</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">MEX</div>
-              <div class="ver-val sm">94.1%</div>
-              <div class="ver-lm pos">LM: ▲ +1.5pp</div>
-              <div class="ver-delta pos">TG: ▲ +4.1pp</div>
-            </div>
-            <div class="kpi-col">
-              <div class="ver-name">CRI</div>
-              <div class="ver-val sm">94.8%</div>
-              <div class="ver-lm pos">LM: ▲ +6.2pp</div>
-              <div class="ver-delta pos">TG: ▲ +4.8pp</div>
-            </div>
-          </div>
-          <div class="chart-area">
-            <div class="legend-row">
-              <span><span class="legend-dash"></span>2025</span>
-              <span><span class="legend-dot" style="background:#1e5fa8;"></span>2026</span>
-            </div>
-            <canvas id="nsmLITE" height="80"></canvas>
-          </div>
-        </div>
-      </div>
-    </div><div class="divider"></div>
-
-    <div class="section">
-      <div class="section-title">② So What — ¿Por qué estos resultados?</div>
-      <div class="sw-item">💰 <strong>Crecimiento Ajustado USD (+3.35%):</strong> El recaudo bruto de marzo contiene el ingreso retrasado de Bancolombia por la caída al cierre del mes pasado; al reasignar el revenue al mes de origen, obtenemos el crecimiento efectivo.</div>
-      <div class="sw-item">📊 Tuvimos aumento en new adds (<strong>+$48K USD</strong>), recovery de facturas pendientes (<strong>+$33K USD</strong>) y upgrades (<strong>+$7.5K USD</strong>).</div>
-      <div class="sw-item">📈 <strong>+5% en eficiencias.</strong> Marzo tuvo buen performance, y la diferencia se infla por la acumulación de ciclos al cierre de febrero.</div>
-      <div class="sw-item">🧟 <strong>Proyección churn: Se proyecta en 4.06%</strong> (−1.19% vs febrero). A la fecha, tenemos +299 reactivados y −56 retiros, gap positivo que estimamos mantener mediante campañas de gestión ya activas con Retention.</div>
-      <div class="sw-item">🕵️ <strong>Distorsión del churn:</strong> El 47% de los retiros delinquent por mes se reactivan al mes siguiente, inflando el churn. Para combatirlos, ya escalamos la estrategia a Producto y coordinaremos su ejecución con prioridad.</div>
-      <div class="sw-item">📊 La proporción del New MRR por anualidades se repuso respecto a febrero y subiendo hasta <strong>15.74%</strong> para marzo; a nivel general, también aumentamos el ticket promedio.</div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="section">
-      <div class="section-title">③ Now What — Próximos Pasos</div>
-      <div class="nw-item">
-        <div class="nw-title">🧩 Mapeo de Rechazos</div>
-        <div class="nw-desc">Optimización avanzada. Los últimos casos atípicos ya se encuentran en revisión cruzada con el equipo de Conversion.</div>
-      </div>
-      <div class="nw-item">
-        <div class="nw-title">🔄 Control de Reactivaciones</div>
-        <div class="nw-desc">En sinergia con Reactivation y Loyalty, buscamos implementar el PopUp limitante en usuarios reincidentes, con esto, estimamos mitigar la distorsión que generan en la métrica de churn.</div>
-      </div>
-      <div class="nw-item">
-        <div class="nw-title">🔇 Churn Silencioso</div>
-        <div class="nw-desc">Seguimos analizándolo para identificar patrones de abandono pasivo e impulsar nuevas estrategias junto a Producto.</div>
-      </div>
-      <div class="nw-item">
-        <div class="nw-title">🤖 IA en MBR</div>
-        <div class="nw-desc">Mejoramos la extracción y consolidación de datos con Claude Code y NotebookLM. Actualmente trabajamos con el equipo de Data para escalar la solución y subsanar limitantes de arquitectura y permisos.</div>
-      </div>
-      <div class="nw-item">
-        <div class="nw-title">💳 Estrategias en Producción</div>
-        <div class="nw-desc">Llevamos evaluación continua de los experimentos activos con Loyalty (cobro a segundas cuentas y gestión de hard declines en República Dominicana).</div>
-      </div>
-      <div class="nw-item">
-        <div class="nw-title">🌐 Orquestador de Pagos</div>
-        <div class="nw-desc">Integración en curso de Kushki y OpenPay para robustecer el ruteo inteligente de transacciones y maximizar nuestra tasa de aprobación.</div>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <div class="section">
-      <div class="section-title">④ Análisis Adicionales</div>
-
-      <div class="bridge-row-charts">
-        <div class="bridge-card">
-          <div class="bridge-card-title">Feb 2026 — GLO Revenue Bridge <span style="font-weight:400;color:#999;">(miles USD)</span></div>
-          <div class="bridge-chart-area"><canvas id="bridgeFEB" height="220"></canvas></div>
-        </div>
-        <div class="bridge-card">
-          <div class="bridge-card-title">Mar 2026 — GLO Revenue Bridge <span style="font-weight:400;color:#999;">(miles USD)</span></div>
-          <div class="bridge-chart-area"><canvas id="bridgeMAR" height="220"></canvas></div>
-        </div>
-      </div>
-      <div class="bridge-summary">
-        Marzo tuvo impulso principalmente de <strong>new adds</strong> y la recuperación de <strong>ciclos pendientes de febrero</strong>. Este mes trajimos más logos, con ticket superior, mejorando el <strong>New ARPA</strong> y recolectamos más de ciclos de cohortes anteriores por la acumulación de ciclos al cierre de febrero (<strong>Efecto calendario</strong>).
-      </div>
-
-      <div style="margin-top:22px;">
-        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#0D1B2A;margin-bottom:12px;">Proyección Recaudo — Abril 2026</div>
-        <div class="proj-bullets">
-          <ul>
-            <li>Las facturas pendientes de febrero inflaron la proyección de marzo. Sin mora, crecemos 2.37% (52K USD).</li>
-            <li>Las versiones principales crecen en moneda local.</li>
-            <li>La baja de CRI representa $85 USD, condensada entre planes contador y tienda.</li>
-            <li>El peso mexicano se apreció un 3.83% durante marzo, haciendo que proyectemos menos en USD.</li>
-          </ul>
-        </div>
-        <table class="pt">
-          <thead><tr><th>Versión</th><th>Forecast USD</th><th>Δ% Prods</th><th>Δ% Revenue</th><th>Δ% USD</th></tr></thead>
-          <tbody>
-            <tr><td>COL</td><td><strong>$1,491,716</strong></td><td class="pos">▲ +3.82%</td><td class="neg">▼ −0.53%</td><td class="pos">▲ +0.33%</td></tr>
-            <tr class="sub"><td>└ Mensual</td><td>$1,322,941</td><td class="pos">▲ +4.13%</td><td class="pos">▲ +1.15%</td><td class="pos">▲ +2.03%</td></tr>
-            <tr class="sub"><td>└ Anual</td><td>$168,775</td><td class="neg">▼ −15.47%</td><td class="neg">▼ −11.98%</td><td class="neg">▼ −11.21%</td></tr>
-            <tr><td>DOM</td><td><strong>$401,642</strong></td><td class="pos">▲ +6.30%</td><td class="pos">▲ +5.84%</td><td class="pos">▲ +5.84%</td></tr>
-            <tr class="sub"><td>└ Mensual</td><td>$372,215</td><td class="pos">▲ +6.35%</td><td class="pos">▲ +7.05%</td><td class="pos">▲ +7.06%</td></tr>
-            <tr class="sub"><td>└ Anual</td><td>$29,426</td><td class="neu">→ 0.00%</td><td class="neg">▼ −7.48%</td><td class="neg">▼ −7.48%</td></tr>
-            <tr><td>MEX</td><td><strong>$221,039</strong></td><td class="pos">▲ +4.98%</td><td class="pos">▲ +4.83%</td><td class="neg">▼ −0.43%</td></tr>
-            <tr class="sub"><td>└ Mensual</td><td>$191,011</td><td class="pos">▲ +5.26%</td><td class="pos">▲ +5.11%</td><td class="neg">▼ −0.16%</td></tr>
-            <tr class="sub"><td>└ Anual</td><td>$30,029</td><td class="neg">▼ −13.11%</td><td class="pos">▲ +3.03%</td><td class="neg">▼ −2.13%</td></tr>
-            <tr><td>CRI</td><td><strong>$71,488</strong></td><td class="pos">▲ +2.46%</td><td class="pos">▲ +9.37%</td><td class="pos">▲ +9.37%</td></tr>
-            <tr class="sub"><td>└ Mensual</td><td>$62,061</td><td class="pos">▲ +1.91%</td><td class="neg">▼ −0.14%</td><td class="neg">▼ −0.14%</td></tr>
-            <tr class="sub"><td>└ Anual</td><td>$9,427</td><td class="pos">▲ +80.00%</td><td class="pos">▲ +193.07%</td><td class="pos">▲ +192.99%</td></tr>
-          </tbody>
-        </table>
-        <p style="font-size:10px;color:#bbb;margin-top:6px;">* Δ% Revenue = cambio en moneda local vs Mar 2026 &nbsp;·&nbsp; Δ% USD = cambio en dólares vs Mar 2026 &nbsp;·&nbsp; Total GLO (todas las versiones): <strong style="color:#555;">$2,355,699</strong> (+0.5% vs proyección anterior)</p>
-      </div>
-    </div>
-
-    <div class="footer">
-      <strong style="color:#fff;">Equipo Collection · Alegra</strong><br>
-      MBR Marzo 2026 · Generado el 8 de abril de 2026<br>
-      <span style="font-size:10px;color:#4a6f8a;">Datos: Redshift + QuickSight · Metodología alineada con QS · Sin Alanube</span>
-    </div>
-
+  <div style="background:#F7F9FC;border-left:3px solid #00c389;border-radius:0 8px 8px 0;padding:12px 16px;margin-bottom:14px;font-size:13px;color:#4A5568;line-height:1.75;"><strong style="color:#1B2A4A;">Proyección de mayo:</strong> Proyectamos <strong style="color:#1B2A4A;">+0.84% (+19.7K USD)</strong> en revenue. Se proyecta mayor recaudo, impulsado por mensualidades. Las <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#FDECEA;color:#B91C1C;margin:0 1px;">anualidades</span> bajan por efecto estacional, conforme a la distribución de pagos anuales en 2026. <span style="display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:#EBF2FF;color:#2D4A8A;margin:0 1px;">MEX</span> disminuye en recaudo MXN mensual por retiros y downgrades en planes Plus. Mayo tendrá HW, por lo que se espera que el recaudo se vea <strong style="color:#1B2A4A;">impulsado por esta</strong>.</div>
+  <div style="background:#fff;border:1px solid #E2E8F0;border-radius:12px;overflow:hidden;margin-bottom:14px;">
+  <div style="background:#F7F9FC;padding:14px 16px;border-bottom:1px solid #E2E8F0;">
+    <div style="font-size:13px;font-weight:700;color:#1A1D23;">PROYECCIÓN DEL RECAUDO MENSUAL <span style="color:#3B6ED4;font-weight:700;">Mayo 2026</span></div>
+    <div style="font-size:11px;color:#A0AEC0;margin-top:2px;">Esperado a cobrar en versiones y frecuencias principales</div>
   </div>
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr style="background:#EEF1F7;">
+      <th style="font-size:11px;font-weight:700;color:#718096;padding:8px 12px;text-align:left;letter-spacing:0.5px;">País / Frecuencia</th>
+      <th style="font-size:11px;font-weight:700;color:#718096;padding:8px 8px;text-align:right;">Forecast USD</th>
+      <th style="font-size:11px;font-weight:700;color:#718096;padding:8px 8px;text-align:center;">Δ% Prods</th>
+      <th style="font-size:11px;font-weight:700;color:#718096;padding:8px 8px;text-align:center;">Δ% Revenue</th>
+      <th style="font-size:11px;font-weight:700;color:#718096;padding:8px 8px;text-align:center;">Δ% USD</th>
+    </tr>
+    <tr style="background:#F7F9FC;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 12px;">COL</td>
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 8px;text-align:right;">$1,523,948</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.03%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.56%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 2.16%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Mensual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$1,363,362</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 0.07%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 1.44%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 3.06%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Anual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$160,586</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 7.43%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 6.34%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 4.85%</span></td>
+    </tr><tr style="background:#F7F9FC;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 12px;">DOM</td>
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 8px;text-align:right;">$398,132</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 2.46%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 0.88%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 0.87%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Mensual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$375,268</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 2.63%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.82%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.82%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Anual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$22,863</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 22.58%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 22.30%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 22.30%</span></td>
+    </tr><tr style="background:#F7F9FC;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 12px;">MEX</td>
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 8px;text-align:right;">$222,898</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.09%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 2.66%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.84%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Mensual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$195,626</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 0.22%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 1.14%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 2.42%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Anual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$27,272</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 9.43%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 12.33%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 9.18%</span></td>
+    </tr><tr style="background:#F7F9FC;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 12px;">CRI</td>
+      <td style="font-size:12.5px;font-weight:700;color:#1B2A4A;padding:8px 8px;text-align:right;">$67,302</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 1.85%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 5.85%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 5.85%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Mensual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$64,063</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 2.64%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 3.25%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#38A169;font-weight:600;">▲ 3.25%</span></td>
+    </tr><tr style="background:#FFFFFF;border-bottom:1px solid #EEF1F7;">
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 12px;">&nbsp;&nbsp;&nbsp;Anual</td>
+      <td style="font-size:12.5px;font-weight:400;color:#4A5568;padding:8px 8px;text-align:right;">$3,239</td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 61.11%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 65.64%</span></td>
+      <td style="font-size:12px;padding:8px 8px;text-align:center;"><span style="color:#E53E3E;font-weight:600;">▼ 65.64%</span></td>
+    </tr>
+  </table>
 </div>
 
-<script>
-  function validarAcceso() {
-    const input = document.getElementById('email-input').value.toLowerCase().trim();
-    if (input.endsWith('@alegra.com')) {
-      // Si es válido, ocultamos la pantalla azul y mostramos el reporte
-      document.getElementById('login-screen').style.display = 'none';
-      document.getElementById('report-content').style.display = 'block';
-    } else {
-      // Si es inválido, mostramos mensaje de error
-      document.getElementById('error-msg').style.display = 'block';
-    }
-  }
+  <!-- Detalle y cierre -->
+  <div style="background:#F7F9FC;border:1px solid #E8ECF2;border-radius:10px;padding:14px 18px;margin-top:8px;font-size:13px;color:#4A5568;line-height:1.75;">
+    El detalle de los datos anteriores lo encontrarán en
+    <a href="https://docs.google.com/document/d/13e5FNSKgvk5HQDYRf2HKyYuzDeAyNHLUyR9pY0SIZ4k/edit?tab=t.0"
+       style="color:#3B6ED4;font-weight:600;">este documento</a>.
+    Agradecemos su atención y quedamos atentos a cualquier comentario o sugerencia.
+  </div>
 
-  // Permitir usar la tecla "Enter" para entrar más rápido
-  document.getElementById('email-input').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') validarAcceso();
-  });
-</script>
+</td></tr>
 
-<script>
-Chart.defaults.font.family = "'Segoe UI', Arial, sans-serif";
-Chart.defaults.font.size   = 10;
-Chart.defaults.color       = '#888';
+<!-- FOOTER -->
+<tr><td style="background:#F7F9FC;border-top:1px solid #E8ECF2;padding:24px 40px;">
+  <table cellpadding="0" cellspacing="0" style="margin-bottom:18px;"><tr>
+    <td valign="middle" style="padding-right:14px;">
+      <div style="width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#3B6ED4,#1B2A4A);text-align:center;line-height:44px;color:#FFFFFF;font-size:15px;font-weight:700;">MV</div>
+    </td>
+    <td valign="middle">
+      <div style="font-size:14px;font-weight:700;color:#1B2A4A;">Mario Valdez Arias</div>
+      <div style="font-size:12px;color:#8A94A6;">Collection Data Analyst</div>
+      <div style="font-size:11px;color:#3B6ED4;margin-top:2px;">alegra.com</div>
+    </td>
+  </tr></table>
+  <img src="https://drive.google.com/uc?export=view&id=1JogPFKodSsEn734nxCN2iSAjQRguEyPA" height="22" style="display:block;height:22px;" alt="alegra">
+</td></tr>
 
-const months12 = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
-
-function dualLineChart(id, data2025, data2026, color, yMin, yMax, tickFmt, withTarget) {
-  const datasets = [
-    { label: '2025', data: data2025, borderColor: '#bbb', backgroundColor: 'transparent', borderWidth: 1.5, borderDash: [5, 3], pointRadius: 2, pointHoverRadius: 4, pointBackgroundColor: '#bbb', tension: 0.35, spanGaps: false },
-    { label: '2026', data: data2026, borderColor: color, backgroundColor: 'transparent', borderWidth: 2.5, pointRadius: 4, pointHoverRadius: 6, pointBackgroundColor: color, tension: 0.35, spanGaps: false }
-  ];
-
-  if (withTarget) { datasets.push({ label: 'Target 90%', data: months12.map(() => 90), borderColor: '#ddd', borderDash: [3, 3], borderWidth: 1, pointRadius: 0, backgroundColor: 'transparent' }); }
-
-  new Chart(document.getElementById(id), {
-    type: 'line', data: { labels: months12, datasets },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { display: false }, tooltip: { filter: ctx => ctx.parsed.y !== null, callbacks: { label: ctx => ctx.dataset.label + ': ' + tickFmt(ctx.parsed.y) } } },
-      scales: { x: { grid: { display: false }, ticks: { font: { size: 9 } } }, y: { min: yMin, max: yMax, grid: { color: '#f0f0f0' }, ticks: { callback: v => tickFmt(v), font: { size: 9 }, maxTicksLimit: 4 } } }
-    }
-  });
-}
-
-function y26(vals, startIdx) { return months12.map((_, i) => (i >= startIdx && i < startIdx + vals.length) ? vals[i - startIdx] : null); }
-
-const recGLO25 = [1662.3, 1776.4, 1932.7, 1857.8, 1871.6, 1878.9, 2004.6, 1980.5, 2033.6, 2084.3, 2113.4, 2311.7];
-const recGLO26 = y26([2374.9, 2291.4, 2423.4], 0);
-const recCORE25 = [926.1, 985.7, 1065.7, 1046.0, 1053.8, 1046.1, 1138.3, 1124.2, 1158.8, 1196.0, 1223.9, 1372.2];
-const recCORE26 = y26([1416.9, 1353.0, 1435.4], 0);
-const recLITE25 = [736.1, 790.8, 867.1, 811.8, 817.8, 832.8, 866.2, 856.3, 874.8, 888.3, 889.5, 939.5];
-const recLITE26 = y26([958.0, 938.4, 988.0], 0);
-
-const nsmGLO25 = [null, null, 93.9, 92.0, 92.8, 92.3, 94.3, 92.7, 93.5, 93.9, 91.2, 94.5];
-const nsmGLO26 = y26([91.5, 89.2, 93.8], 0);
-const nsmCORE25 = [null, null, 97.7, 95.9, 96.0, 96.1, 97.5, 95.6, 96.6, 96.7, 93.6, 98.3];
-const nsmCORE26 = y26([93.2, 92.3, 96.5], 0);
-const nsmLITE25 = [null, null, 91.9, 89.9, 91.1, 90.2, 92.6, 91.0, 91.7, 92.3, 89.8, 92.3];
-const nsmLITE26 = y26([90.6, 87.3, 92.0], 0);
-
-dualLineChart('recGLO',  recGLO25,  recGLO26,  '#E8731A', 1500, 2700, v => '$'+(v/1000).toFixed(1)+'M', false);
-dualLineChart('recCORE', recCORE25, recCORE26, '#2d7a4f',  850, 1600, v => '$'+(v/1000).toFixed(1)+'M', false);
-dualLineChart('recLITE', recLITE25, recLITE26, '#1e5fa8',  600, 1200, v => '$'+(v/1000).toFixed(1)+'M', false);
-
-dualLineChart('nsmGLO',  nsmGLO25,  nsmGLO26,  '#E8731A', 85, 100, v => v.toFixed(1)+'%', true);
-dualLineChart('nsmCORE', nsmCORE25, nsmCORE26, '#2d7a4f', 88, 101, v => v.toFixed(1)+'%', true);
-dualLineChart('nsmLITE', nsmLITE25, nsmLITE26, '#1e5fa8', 85,  97, v => v.toFixed(1)+'%', true);
-
-function buildBridge(id, items) {
-  const labels   = items.map(i => i.label);
-  const floatData = items.map(i => i.type === 'zero' ? [i.base, i.base] : [Math.min(i.base, i.end), Math.max(i.base, i.end)]);
-  const colors   = items.map(i => {
-    if (i.type === 'base')  return '#2d7a4f';
-    if (i.type === 'pos')   return '#2d7a4f';
-    if (i.type === 'neg')   return '#c0392b';
-    if (i.type === 'close') return '#45b6c5';
-    return '#ccc';
-  });
-
-  new Chart(document.getElementById(id), {
-    type: 'bar',
-    data: { labels, datasets: [{ data: floatData, backgroundColor: colors, borderColor: colors, borderWidth: 0, borderRadius: 2 }] },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => { const item = items[ctx.dataIndex]; if (item.type === 'base' || item.type === 'close') return '$' + item.end.toFixed(2) + 'K'; const v = item.end - item.base; return (v >= 0 ? '+' : '') + '$' + v.toFixed(2) + 'K'; } } } },
-      scales: { x: { grid: { display: false }, ticks: { font: { size: 8 }, maxRotation: 45, minRotation: 30 } }, y: { min: 1700, max: 2900, grid: { color: '#f0f0f0' }, ticks: { callback: v => '$' + v.toFixed(0), font: { size: 9 }, maxTicksLimit: 5 } } }
-    }
-  });
-}
-
-buildBridge('bridgeFEB', [
-  { label: 'Net Rev −1',     base: 0,       end: 2371.61, type: 'base'  },
-  { label: 'Recovered P−1', base: 2371.61,  end: 2467.79, type: 'pos'   },
-  { label: 'Pricing exp.',   base: 2467.79,  end: 2467.79, type: 'zero'  },
-  { label: 'New Logos',      base: 2467.79,  end: 2645.66, type: 'pos'   },
-  { label: 'Reactivated',    base: 2645.66,  end: 2690.14, type: 'pos'   },
-  { label: 'Recovered',      base: 2690.14,  end: 2710.31, type: 'pos'   },
-  { label: 'Upgrades',       base: 2710.31,  end: 2742.02, type: 'pos'   },
-  { label: 'Efficiencies',   base: 2665.30,  end: 2742.02, type: 'neg'   },
-  { label: 'Churn',          base: 2575.74,  end: 2665.30, type: 'neg'   },
-  { label: 'Down.+Mora',     base: 2487.06,  end: 2575.74, type: 'neg'   },
-  { label: 'Opened cycles',  base: 2294.89,  end: 2487.06, type: 'neg'   },
-  { label: 'FX Rate',        base: 2294.89,  end: 2307.87, type: 'pos'   },
-  { label: 'Subs. plans',    base: 2290.29,  end: 2307.87, type: 'neg'   },
-  { label: 'Cierre Feb',     base: 0,        end: 2290.29, type: 'close' }
-]);
-
-buildBridge('bridgeMAR', [
-  { label: 'Net Rev −1',     base: 0,        end: 2290.29, type: 'base'  },
-  { label: 'Recovered P−1', base: 2290.29,   end: 2419.53, type: 'pos'   },
-  { label: 'Pricing exp.',   base: 2419.53,  end: 2419.53, type: 'zero'  },
-  { label: 'New Logos',      base: 2419.53,  end: 2634.55, type: 'pos'   },
-  { label: 'Reactivated',    base: 2634.55,  end: 2686.07, type: 'pos'   },
-  { label: 'Recovered',      base: 2686.07,  end: 2710.64, type: 'pos'   },
-  { label: 'Upgrades',       base: 2710.64,  end: 2749.02, type: 'pos'   },
-  { label: 'Efficiencies',   base: 2749.02,  end: 2811.95, type: 'pos'   },
-  { label: 'Churn',          base: 2713.70,  end: 2811.95, type: 'neg'   },
-  { label: 'Down.+Mora',     base: 2560.21,  end: 2713.70, type: 'neg'   },
-  { label: 'Opened cycles',  base: 2447.09,  end: 2560.21, type: 'neg'   },
-  { label: 'FX Rate',        base: 2421.03,  end: 2447.09, type: 'neg'   },
-  { label: 'Subs. plans',    base: 2419.37,  end: 2421.03, type: 'neg'   },
-  { label: 'Cierre Mar',     base: 0,        end: 2419.37, type: 'close' }
-]);
-</script>
-</body>
-</html>
+</table>
+</td></tr>
+</table>
+</body></html>
